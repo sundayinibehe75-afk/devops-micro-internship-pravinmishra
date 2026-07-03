@@ -33,7 +33,10 @@ You will reuse this in later weeks. So do it properly once.
 
 ## Answer
 
-Add your answer here...
+Most people believe AI will completely replace developers — handling all coding and debugging without human input. I strongly disagree.
+I believe AI and developers will work together as a team, not against each other. As someone coming from a Cloud and DevOps background who leverages AI daily, I have seen firsthand that not every line of code AI generates is correct. A developer still needs to review, validate and make decisions about AI generated code before deploying anything to production.
+AI accelerates the work — it doesn't replace the thinking. The developer brings context, judgment and accountability that AI simply cannot. The future belongs to developers who know how to collaborate with AI effectively, not those who fear it or blindly trust it.
+AI is a powerful tool. But tools still need skilled hands to use them well.
 
 ---
 
@@ -55,11 +58,11 @@ Write each truth in this format:
 
 ### Truth
 
-Add your answer here...
+Teaching others what you already know deepens your own understanding far beyond what studying alone ever could.
 
 ### Evidence from my life
 
-Add your answer here...
+ When I started teaching German on Preply I felt nervous and unsure despite already knowing the language. The first month was difficult. But showing up consistently, explaining concepts differently to different students, and helping them pass exams and speak confidently made me realise I understood German far deeper than I thought. Teaching forced me to fill gaps I never knew existed.
 
 ---
 
@@ -67,11 +70,12 @@ Add your answer here...
 
 ### Truth
 
-Add your answer here...
+Consistent effort toward a goal almost always delivers more than the goal itself.
+
 
 ### Evidence from my life
 
-Add your answer here...
+I prepared for the KCNA and AWS Cloud Practitioner exam through long study sessions and late nights. The goal was simply to pass. But when I finally did, I realised the real reward wasn't the certificate — it was the AWS knowledge I had built, the gaps I had filled and the confidence I had gained. The exam was just the destination. The journey was the real prize.
 
 ---
 
@@ -79,11 +83,11 @@ Add your answer here...
 
 ### Truth
 
-Add your answer here...
+You never truly understand technology until you deploy something real with it.
 
 ### Evidence from my life
 
-Add your answer here...
+I had been building and deploying projects during my Cloud and DevOps training — CI/CD pipelines, containerized applications and Kubernetes deployments. But each project deepened my understanding further. Deploying my own tutoring platform on AWS brought everything together in a different way — this time it was MY product, MY users and MY responsibility. I stopped seeing tools in isolation and started thinking in systems — understanding how each piece connects, depends on and affects the others. Real projects don't just teach you tools, they teach you how to think
 
 ---
 
@@ -135,13 +139,30 @@ Include this line:
 
 ## Your Article
 
-Add your answer here...
+---
+
+Building Without Borders: The Inibehe Emmanuel Story
+By our Technology Correspondent
+
+---
+
+Three years ago, Inibehe Emmanuel Sunday was a German language tutor moonlighting as a DevOps engineer trying to figure out where cloud infrastructure ended and artificial intelligence began. Today he is a Senior DevOps and AI Infrastructure Engineer working remotely for a European technology company - proof that geography was never the limitation he feared it might be.
+The journey was anything but accidental.
+By the time recruiters found his LinkedIn profile, Inibehe had built a certification stack spanning AWS, Azure and Kubernetes - not as a collection of badges but as a deliberate roadmap that reflected exactly the infrastructure he was building every day. - a certification that directly reflected the CI/CD pipelines, containerized deployments and GitOps workflows he had been building since his early days at HNG Tech, OphirCloud and the DMI Micro Internship with Agentic AI - where his understanding of AI-powered DevOps workflows truly took shape. His GitHub became a living portfolio - real projects, real infrastructure code, real documentation that any hiring manager could read and understand immediately.
+But the certification that meant the most was AI-300 - the Azure MLOps Engineer Associate. It was the bridge between the two worlds he had been navigating simultaneously - DevOps infrastructure and artificial intelligence. He built on that foundation with the NVIDIA AI Infrastructure and Operations certification, giving him a rare combination almost nobody else in his network possessed.
+His tutoring platform, fluencytutoring.online - once a simple three-container Docker Compose application running on a single EC2 instance - grew into a fully automated AI-powered German learning platform serving students across Europe. It featured an intelligent exercise engine that tracked student weak areas, generated personalized grammar exercises and adapted in real time. The infrastructure behind it became his most impressive portfolio piece - multi-region AWS deployment, Kubernetes orchestration, automated CI/CD pipelines and an AI agent built on Claude API.
+He published technical articles documenting everything - how he designed the infrastructure, what broke, what he fixed and what he learned. His blog attracted readers from the DevOps and AI communities across Europe and Africa. Engineers bookmarked his posts on Kubernetes networking, AI agent deployment patterns and cross-cloud infrastructure design.
+The European company that hired him found him through LinkedIn. They had read his articles, reviewed his GitHub and seen his certification trajectory. They weren't hiring someone who knew everything - they were hiring someone who demonstrated consistent growth, honest documentation of failures and a rare ability to connect DevOps infrastructure with AI workloads.
+He contributed back to the community that shaped him - mentoring engineers through technical blogs and the same kind of conversations that had accelerated his own learning years earlier. He never forgot that his biggest breakthrough wasn't a certification or a job offer. It was the day he stopped studying tools in isolation and started thinking in systems.
+Fully remote. Building infrastructure for AI workloads across Europe.
+The geography never changed. Everything else did.
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). You can start your DevOps journey by joining this [Discord community](https://discord.pravinmishra.com/) ( https://discord.pravinmishra.com/ )
 
 ### Public Link
 
 Paste your link here:
 
-`__________________________`
+https://medium.com/@sundayinibehe75/building-without-borders-the-inibehe-emmanuel-story-58ab6af79b2d
 
 ---
 
@@ -171,9 +192,8 @@ If Yes:
 
 **What emotion did you feel?** (minimum 50–100 words)
 
-## Answer
+The strongest emotion I felt was guilt, followed by regret. Even though taking the shortcut seemed easier at the time, I wasn't proud of it afterward. I kept thinking that I could have handled the situation in a more honest way, even if it required more effort or took longer. It also made me feel stressed because I worried about being found out or disappointing others. Looking back, the experience reminded me that short-term convenience is rarely worth sacrificing my integrity. Since then, I have tried to be more honest, take responsibility for my actions, and complete my work the right way, even when it is more challenging.
 
-Add your answer here...
 
 ---
 
@@ -199,16 +219,16 @@ Choose books that improve:
 
 ## Book List
 
-1. Add your answer here...
-2. Add your answer here...
-3. Add your answer here...
-4. Add your answer here...
-5. Add your answer here...
-6. Add your answer here...
-7. Add your answer here...
-8. Add your answer here...
-9. Add your answer here...
-10. Add your answer here...
+1. The 5 AM Club — Robin Sharma
+2. Atomic Habits — James Clear
+3. Deep Work — Cal Newpor
+4. The 7 Habits of Highly Effective People — Stephen R. Covey
+5. How to Win Friends and Influence People — Dale Carnegie
+6. The Psychology of Money — Morgan Housel
+7. The Lean Startup — Eric Ries
+8. So Good They Can't Ignore You — Cal Newport
+9. The Effective Executive — Peter F. Drucker
+10. Never Split the Difference — Chris Voss
 
 ---
 
@@ -237,16 +257,16 @@ List topics only. No need to share numbers.
 
 ## My Metrics
 
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
-* Add your answer here...
+* Learning hours
+* New skills acquired
+* Projects completed
+* GitHub contributions
+* Deep work sessions
+* Daily focus
+* Sleep hours
+* Exercise and workouts
+* Spending tracker
+* Savings and investments
 
 ---
 
@@ -272,9 +292,7 @@ Examples:
 
 Answer:
 
-Add your answer here...
-
----
+Yes
 
 ## Step 2: Your 5-Month Routine + Focus Blocks
 
@@ -290,7 +308,11 @@ Example:
 
 #### My Weekly Routine
 
-Add your answer here...
+-Monday–Friday: 2 hours of focused learning and hands-on practice (DevOps/DMI tasks)
+-Monday–Friday: 30 minutes of reading a non-fiction book
+-Tuesday & Thursday: Build or improve a personal project and update GitHub
+-Saturday: Attend DMI sessions, complete assignments, and review notes
+-Sunday: Weekly review, plan the upcoming week, and organize tasks
 
 ---
 
@@ -298,11 +320,12 @@ Add your answer here...
 
 #### When Will You Do DMI Work? (Days + Time)
 
-Add your answer here...
+-Monday–Friday: 7:00 PM – 9:00 PM
+-Saturday: 10:00 AM – 1:00 PM
 
 #### How Many Sessions Per Week?
 
-Add your answer here...
+-6 focused study sessions per week
 
 ---
 
@@ -316,36 +339,39 @@ Examples:
 
 #### My Distraction Rules
 
-Add your answer here...
-
----
+-Keep my phone on Do Not Disturb during study sessions.
+-No social media until my daily DMI work is completed.
+-Study in a quiet, organized workspace.
+-Close unnecessary browser tabs and applications.
+-Take a 10-minute break after every 60–90 minutes of focused work.
+-Write down distracting thoughts instead of acting on them immediately.
 
 # Reflection – Week 1
 
 ### Biggest insight I got about myself this week
 
-Add your answer here...
+The brain dump exercise made me realize how much mental energy I spend trying to remember everything. Writing things down made me feel more organized and helped me think more clearly.
 
 ### My biggest weakness/loop I noticed
 
-Add your answer here...
+I sometimes rely too much on memory instead of using a system to keep track of my responsibilities and goals.
 
 ### One system I will implement from this week (exact habit + time)
 
-Add your answer here...
+Every night at 9:00 PM, I will spend 10 minutes writing down unfinished tasks and planning the next day before going to bed.
 
 ### LinkedIn Post
 
 Paste your LinkedIn post link here:
 
-`__________________________`
+https://www.linkedin.com/feed/update/urn:li:activity:7478878036629733377/
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **ADD LINK HERE**  
-- Blog / Medium : **ADD LINK HERE**  
+- LinkedIn Post URL: https://www.linkedin.com/feed/update/urn:li:activity:7478878036629733377/  
+- Blog / Medium : https://medium.com/@sundayinibehe75/week-1-of-the-dmi-micro-internship-success-mindset-this-week-wasnt-about-technical-skills-it-82a59b93b4af  
 
 ---
 

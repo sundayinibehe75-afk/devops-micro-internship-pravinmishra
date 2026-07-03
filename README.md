@@ -14,11 +14,11 @@
 
 | | |
 |---|---|
-| **Name** | Pravin Mishra |
-| **LinkedIn** | [pravin-mishra-aws-trainer](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) |
-| **Location** | Helsinki, Finland |
-| **Background** | Cloud, DevOps & AI Consultant |
-| **Goal** | Train 10,000+ DevOps professionals |
+| **Name** | Inibehe Emmanuel Sunday |
+| **LinkedIn** | https://www.linkedin.com/in/emmanuel-sunday-210a08323/ |
+| **Location** | Nigeria |
+| **Background** | Cloud & DevOps|
+| **Goal** | To accelerate software delivery and optimize system reliability through automated, scalable infrastructure while fostering cross-functional team collaboration. |
 
 ---
 
@@ -67,11 +67,11 @@ This is not a course. It is an internship-style program — real deployments, re
 
 **Your stack (uncomment each badge as you earn it):**
 
-<!-- Week 00 → Internet & Networking Basics -->
-<!-- [![Week 00 – Networking](./badges/week-00.svg)](./week-00-internet-and-networking/) -->
+ Week 00 → Internet & Networking Basics 
+ [![Week 00 – Networking](./badges/week-00.svg)](./week-00-internet-and-networking/) 
 
-<!-- Week 01 → Success Mindset -->
-<!-- [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/) -->
+ Week 01 → Success Mindset 
+ [![Week 01 – Mindset](./badges/week-01.svg)](./week-01-success-mindset/) 
 
 <!-- Week 02 → Agentic AI with Claude Code -->
 <!-- [![Week 02 – Agentic AI](./badges/week-02.svg)](./week-02-agentic-ai/) -->
@@ -133,8 +133,8 @@ This is not a course. It is an internship-style program — real deployments, re
 
 | Week | Topic | Status | Assignment | LinkedIn Post | Blog Post |
 |------|-------|--------|------------|---------------|-----------|
-| 00 | Internet & Networking Basics | ⬜ Not Started | ⏳ Pending | — | — |
-| 01 | Success Mindset | ⬜ Not Started | ⏳ Pending | — | — |
+| 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:activity:7473695494494531584/ | - |
+| 01 | Success Mindset | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:activity:7478878036629733377/ | https://medium.com/@sundayinibehe75/week-1-of-the-dmi-micro-internship-success-mindset-this-week-wasnt-about-technical-skills-it-82a59b93b4af |
 | 02 | Agentic AI with Claude Code | ⬜ Not Started | ⏳ Pending | — | — |
 | 03 | Linux for DevOps | ⬜ Not Started | ⏳ Pending | — | — |
 | 04 | Bash Scripting | ⬜ Not Started | ⏳ Pending | — | — |
@@ -167,6 +167,6 @@ This is not a course. It is an internship-style program — real deployments, re
 If you found this repo useful or want to follow my DevOps journey:
 
 - ⭐ Star this repo
-- 🔗 Connect with me on [LinkedIn](#)
+- 🔗 Connect with me on [https://www.linkedin.com/in/emmanuel-sunday-210a08323/](#)
 - 🌐 Learn more about the program: https://dmi.pravinmishra.com
 - 💬 Join the community: https://discord.pravinmishra.com
