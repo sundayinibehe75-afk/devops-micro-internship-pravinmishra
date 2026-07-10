@@ -54,7 +54,7 @@ Add your screenshot here.
 
 Blog Link:
 
-`__________________________________________`
+https://medium.com/@sundayinibehe75/reflection-week-2-by-inibehe-emmanuel-sunday-ac2e64295ecd
 
 ---
 
@@ -108,7 +108,7 @@ Paste your LinkedIn post content here
 
 ### LinkedIn Post Link:
 
-`__________________________________________`
+https://www.linkedin.com/feed/update/urn:li:share:7481436768249020417/
 
 ---
 
