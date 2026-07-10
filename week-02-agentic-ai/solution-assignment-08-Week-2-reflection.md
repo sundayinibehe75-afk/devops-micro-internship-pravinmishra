@@ -46,7 +46,7 @@ You can publish your blog on:
 
 #### Screenshot 1 — Blog published and visible
 
-Add your screenshot here.
+![alt text](<screenshots/Medium-post-screenshot .png>)
 
 ---
 
@@ -94,7 +94,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 Add your screenshot here.
 
----
+![alt text](screenshots/Linkedin-post-screenshot.png)
 
 ### Submission Field
 
