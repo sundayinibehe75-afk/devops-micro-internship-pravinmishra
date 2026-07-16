@@ -20,27 +20,19 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-01-screenshot-01.png)
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-01-screenshot-02.png)
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-01-screenshot-03.png)
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-01-screenshot-04.png)
 
 ### Notes
 
@@ -48,21 +40,15 @@ Answer the following in your own words:
 
 **1. What proves Nginx is listening on 0.0.0.0:80?**
 
-Write your answer here.
-
----
+tcp      LISTEN    0         511                    0.0.0.0:80              0.0.0.0:*       users:(("nginx",pid=821,fd=5),("nginx",pid=820,fd=5),("nginx",pid=817,fd=5))     ino:9274 sk:8 cgroup:/system.slice/nginx.service <->
 
 **2. What proves SSH is active on port 22?**
 
-Write your answer here.
-
----
+tcp      LISTEN    0         4096                   0.0.0.0:22              0.0.0.0:*       users:(("sshd",pid=804,fd=3),("systemd",pid=1,fd=91))                            ino:7405 sk:7 cgroup:/system.slice/ssh.socket <->
 
 **3. Did you find any unexpected open ports? Explain briefly.**
 
-Write your answer here.
-
----
+Based on the ss -tulpen output, no unexpected open ports were found.
 
 # Task 2 — Service Health & Systemd Validation (Nginx)
 
@@ -74,21 +60,15 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-02-screenshot-01.png)
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-02-screenshot-02.png)
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-02-screenshot-03.png)
 
 ### Notes
 
@@ -96,15 +76,13 @@ Answer the following in your own words:
 
 **1. What happens if Nginx fails to restart in production?**
 
-Write your answer here.
-
----
+If Nginx fails to restart in a production environment, you run sudo systemctl reload nginx
 
 **2. What's your basic rollback plan?**
 
-Write your answer here.
-
----
+1. Revert: Restore the pre-deployment backup file to overwrite the broken configuration.
+2. Restart: Run 'sudo systemctl restart nginx' to immediately bring the web server back online.
+3. Verify: Execute 'sudo nginx -t' and test live site access to confirm full recovery.
 
 # Task 3 — Logs & Request Trace
 
@@ -116,21 +94,15 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-03-screenshot-01.png)
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-03-screenshot-02.png)
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-03-screenshot-03.png)
 
 ### Notes
 
@@ -141,21 +113,17 @@ Answer the following in your own words:
 - If yes, mention 1–2 example error lines from the logs and explain what each one means in simple terms.
 - If no, explain what it means if the error log is empty or shows no recent errors during your check.
 
-Write your answer here.
+### 1. Were there any errors in the logs?
 
----
+No, there were no errors in the logs.The file only showed a standard system "notice" line regarding inherited sockets, which is an informational update rather than an error indicator.
 
 **2. If there were no errors, what does that indicate about the system?**
 
-Write your answer here.
-
----
+An empty or error-free log means that your Nginx server configuration is structurally healthy, the service is running stably without background crashes, and the system is not encountering critical runtime or file permission failures.
 
 **3. Based on the access logs, were your curl requests visible in the log entries? What does that prove about traffic flow?**
 
-Write your answer here.
-
----
+No, curl requests are not visible in these logs; all entries show standard web browsers or bots. This proves that any curl tests run were either pushed out of the recent view by other traffic, or they were sent as outbound requests (like curl ifconfig.me) which do not trigger Nginx's incoming traffic logs.
 
 # Task 4 — System Resource Health Check (Capacity Red Flags)
 
