@@ -135,27 +135,19 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-04-screenshot-01.png)
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02.png)
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-04-screenshot-03.png)
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-04-screenshot-04.png)
 
 ### Notes
 
@@ -163,15 +155,21 @@ Answer the following in your own words:
 
 **1. Which resource looks most critical right now? (CPU/load, memory, or disk) Explain why.**
 
-Write your answer here.
+Memory (RAM) is the most critical resource. 
 
----
+* Low Capacity: The system only has 908 MB of total RAM, and 313 MB is already used while sitting idle. 
+* No Safety Net: Swap space is disabled (0B). Without swap, there is no backup memory buffer. 
+* Crash Risk: If a new application is started, the system will immediately run out of memory and crash.
 
 **2. What happens if disk becomes 100% full in a production server?**
 
-Write your answer here.
+A 100% full disk causes an immediate operational crisis.
 
----
+* Database Corruption: Databases cannot commit transactions or write new data, often leading to table corruption and sudden service shutdowns.
+* Application Crashes: Services like Nginx or Apache crash instantly because they can no longer write to log files (/var/log) or temporary directories (/tmp).
+* Admin Lockout: System administrators can be entirely locked out of the server because SSH requires writing session data to function.
+* Total Outage: External users will immediately experience 500 Internal Server Errors, and background tasks (cron jobs) will fail completely.
+
 
 # Task 5 — Configuration & Deployment Verification
 
@@ -183,21 +181,15 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-05-screenshot-01.png)
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-05-screenshot-02.png)
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-05-screenshot-03.png)
 
 ### Notes
 
@@ -205,9 +197,12 @@ Answer the following in your own words:
 
 **1. How do you confirm that the correct version of the application is deployed?**
 
-Write your answer here.
+Confirming the correct version of a deployed Nginx application involves checking these specific layers:
 
----
+* Command Line Flags: Run 'nginx -v' via SSH to get the short version string, or use 'nginx -V' to see the exact version along with compiled-in modules and build arguments.
+* HTTP Response Headers: Run 'curl -sI http://localhost | grep Server' to inspect the response header. It will expose the running version (e.g., Server: nginx/1.24.0) unless intentionally hidden for security.
+* Package Manager Check: Run 'apt show nginx' or 'dpkg -l nginx' on Ubuntu/Debian systems to verify that the package version installed on the disk aligns with your deployment goals.
+
 
 # Task 6 — Nginx Configuration Failure Simulation
 
@@ -219,21 +214,15 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-06-screenshot-01.png)
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-06-screenshot-02.png)
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-06-screenshot-03.png)
 
 ### Notes
 
@@ -241,21 +230,15 @@ Answer the following in your own words:
 
 **1. What caused the configuration failure?**
 
-Write your answer here.
-
----
+ A closing curly brace (}) was intentionally omitted from the /etc/nginx/sites-enabled/default file. When running nginx -t, the engine fails validation due to an unexpected end of file. This prevents NGINX from starting or reloading, protecting the server from launching a broken configuration.
 
 **2. How did you fix the issue?**
 
-Write your answer here.
-
----
+I fixed the issue by adding the missing closing curly brace (}) to structurally close the server block.
 
 **3. How can you avoid this kind of issue in real production systems?**
 
-Write your answer here.
-
----
+To avoid configuration issues in production, always run sudo nginx -t to validate syntax automatically before executing a graceful reload rather than a full service restart. 
 
 # Task 7 — Web Application Failure Simulation
 
@@ -267,15 +250,11 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-07-screenshot-01.png)
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-07-screenshot-02.png)
 
 ### Notes
 
@@ -283,21 +262,15 @@ Answer the following in your own words:
 
 **1. What caused the application to break in this scenario?**
 
-Write your answer here
-
----
+The application broke because the primary landing file (index.html) was missing from the server's web root directory (/var/www/html). Because NGINX could not find the default index file to display, it denied access to the empty directory and automatically returned an HTTP error response to the user.
 
 **2. How did you fix the issue and restore the application?**
 
-Write your answer here.
-
----
+The issue was fixed by moving the backup file (index.html.bak) back to its original name and location inside the web root directory (/var/www/html). Once the file was restored, NGINX was immediately able to locate the default landing page and serve the website successfully with an HTTP 200 OK status.
 
 **3. What steps would you take to prevent this kind of issue in real production systems?**
 
-Write your answer here.
-
----
+To prevent missing content in traditional NGINX static file hosting, engineers use atomic deployments with symbolic links so live production files are never directly edited or moved [1]. Additionally, automated file integrity tools constantly monitor the web root directory to detect unauthorized deletions and trigger immediate alerts if an error occurs.
 
 # Task 8 — Security & Reliability Review
 
@@ -311,33 +284,23 @@ Answer the following in your own words:
 
 **1. Why is SSH key-based authentication more secure than sharing passwords?**
 
-Write your answer here.
-
----
+SSH key-based authentication is more secure because it uses cryptographic algorithms that are virtually impossible to brute-force, unlike standard passwords.
 
 **2. Why should only required ports be open on a production server?**
 
-Write your answer here.
-
----
+Only required ports should be open on a production server to minimize the attack surface and prevent unauthorized access to internal services. Leaving unused ports open creates unnecessary entry points for automated scanning bots and malicious hackers.
 
 **3. Why is it important for Nginx to be enabled on boot?**
 
-Write your answer here.
-
----
+It is critical for Nginx to be enabled on boot to ensure immediate application availability and automatic recovery if the underlying server crashes, restarts, or undergoes maintenance.
 
 **4. What are the risks of sharing secrets, keys, or credentials publicly?**
 
-Write your answer here.
-
----
+Sharing secrets, keys, or credentials publicly exposes an infrastructure to immediate compromise, leading to data breaches, unauthorized resource consumption, and complete system takeover. Once private keys or passwords are leaked to public repositories, automated malicious bots harvest them within seconds to exploit the host environment.
 
 **5. Why should cloud resources be stopped or terminated when they are no longer needed?**
 
-Write your answer here.
-
----
+Cloud resources should be stopped or terminated when no longer needed to eliminate unnecessary financial costs and reduce the environment's security attack surface.
 
 # LinkedIn Post (Required)
 
@@ -347,15 +310,11 @@ Write your answer here.
 
 Paste your LinkedIn post URL here:
 
-`__________________________`
-
----
+https://www.linkedin.com/feed/update/urn:li:ugcPost:7483892473786687488/
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
-
----
+![alt text](screenshots/Assignment-03-Task-08-screenshot-01.png)
 
 # Submission Instructions
 
