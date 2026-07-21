@@ -330,7 +330,15 @@ Execution: Finally, the script triggers everything by calling the functions in o
 
 #### LinkedIn Post URL
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:share:7484405883616083968/
+=======
+Paste your LinkedIn post URL here:
+
+`Add your URL here`
+
+---
+>>>>>>> upstream/main
 
 #### Screenshot — Published LinkedIn post
 

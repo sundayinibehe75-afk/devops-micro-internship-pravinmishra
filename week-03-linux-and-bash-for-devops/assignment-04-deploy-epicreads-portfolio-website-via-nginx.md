@@ -102,7 +102,13 @@ Verify the deployed website and Nginx service are healthy.
 
 Paste your LinkedIn post URL here:
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:activity:7484303269595447296/
+=======
+`Add your URL here`
+
+---
+>>>>>>> upstream/main
 
 #### Screenshot — Published LinkedIn post showing the live website with your Full Name in the footer
 

@@ -54,7 +54,11 @@ You can publish your blog on:
 
 Blog Link:
 
+<<<<<<< HEAD
 https://medium.com/@sundayinibehe75/reflection-week-2-by-inibehe-emmanuel-sunday-ac2e64295ecd
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -78,7 +82,7 @@ Your post must include:
 
 ### Required P.S. Line (Must Include Exactly)
 
-> **P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). You can start your DevOps journey by joining [DMI waiting list](https://forms.gle/3hvrWJBDzsDeJoPs6) (https://forms.gle/3hvrWJBDzsDeJoPs6).**
+> **P.S. This post is part of the DevOps Micro Internship (DMI) with Agentic AI — Cohort 3 — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public: https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html · Start your DevOps journey: https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-linkedin&utm_campaign=cohort3**
 
 ---
 
@@ -108,7 +112,11 @@ Paste your LinkedIn post content here
 
 ### LinkedIn Post Link:
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:share:7481436768249020417/
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

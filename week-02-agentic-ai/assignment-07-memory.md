@@ -91,7 +91,11 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 Paste your Linkedin post link here:
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:activity:7481409698533986304/
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -99,7 +103,11 @@ https://www.linkedin.com/feed/update/urn:li:activity:7481409698533986304/
 
 Paste your forked repository URL here:
 
+<<<<<<< HEAD
 https://github.com/sundayinibehe75-afk/Ultimate-Agentic-DevOps-with-Claude-Code
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

@@ -438,7 +438,11 @@ Gather was the Bash script collecting raw evidence (service status, port state, 
 
 Paste your LinkedIn post URL here:
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:ugcPost:7484960053918359552/
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 
@@ -452,7 +456,11 @@ https://www.linkedin.com/feed/update/urn:li:ugcPost:7484960053918359552/
 
 Paste the URL of your GitHub folder or repository containing the assignment files here:
 
+<<<<<<< HEAD
 https://github.com/sundayinibehe75-afk/devops-micro-internship-pravinmishra/blob/main/week-03-linux-and-bash-for-devops/assignment-06-ai-assisted-linux-health-check.md
+=======
+`Add your URL here`
+>>>>>>> upstream/main
 
 ---
 

@@ -310,7 +310,13 @@ Cloud resources should be stopped or terminated when no longer needed to elimina
 
 Paste your LinkedIn post URL here:
 
+<<<<<<< HEAD
 https://www.linkedin.com/feed/update/urn:li:ugcPost:7483892473786687488/
+=======
+`Add your URL here`
+
+---
+>>>>>>> upstream/main
 
 #### Screenshot — Published LinkedIn post
 
