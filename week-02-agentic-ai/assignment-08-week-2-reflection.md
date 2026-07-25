@@ -54,11 +54,7 @@ You can publish your blog on:
 
 Blog Link:
 
-<<<<<<< HEAD
 https://medium.com/@sundayinibehe75/reflection-week-2-by-inibehe-emmanuel-sunday-ac2e64295ecd
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 
@@ -112,11 +108,7 @@ Paste your LinkedIn post content here
 
 ### LinkedIn Post Link:
 
-<<<<<<< HEAD
-https://www.linkedin.com/feed/update/urn:li:share:7481436768249020417/
-=======
-`Add your URL here`
->>>>>>> upstream/main
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7481436769637371904-HR20?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 

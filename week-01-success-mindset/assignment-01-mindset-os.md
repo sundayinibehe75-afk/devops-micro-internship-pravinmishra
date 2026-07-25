@@ -368,7 +368,7 @@ Every night at 9:00 PM, I will spend 10 minutes writing down unfinished tasks an
 
 Paste your LinkedIn post link here:
 
-https://www.linkedin.com/feed/update/urn:li:activity:7478878036629733377/
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-micro-internship-activity-7478878036629733377-RKAY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 

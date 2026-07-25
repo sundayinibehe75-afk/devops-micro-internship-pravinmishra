@@ -89,25 +89,13 @@ Run three tests that prove Claude remembers what you told it — without you say
 
 ## Linkedin Post Link
 
-Paste your Linkedin post link here:
-
-<<<<<<< HEAD
-https://www.linkedin.com/feed/update/urn:li:activity:7481409698533986304/
-=======
-`Add your URL here`
->>>>>>> upstream/main
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7481409698533986304-rKdz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 ## GitHub Repository URL
 
-Paste your forked repository URL here:
-
-<<<<<<< HEAD
 https://github.com/sundayinibehe75-afk/Ultimate-Agentic-DevOps-with-Claude-Code
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 
