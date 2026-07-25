@@ -135,7 +135,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:activity:7481436769637371904/ | https://medium.com/@sundayinibehe75/reflection-week-2-by-inibehe-emmanuel-sunday-ac2e64295ecd |
 | 03 | Linux for DevOps | ✅ Completed | ✅ Solved  | https://www.linkedin.com/feed/update/urn:li:activity:7484960055239348224/ | — |
 | 04 | Bash Scripting | ✅ Completed | ✅ Solved  | https://www.linkedin.com/feed/update/urn:li:activity:7484960055239348224/ | — |
-| 05 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:ugcPost:7486558407542411264/ | — |
+| 05 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/feed/update/urn:li:ugcPost:7486558407542411264/ | https://medium.com/@sundayinibehe75/building-an-ai-assisted-git-safety-net-pr-ready-check-dd98373f2bdc |
 | 06 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
 | 07 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
