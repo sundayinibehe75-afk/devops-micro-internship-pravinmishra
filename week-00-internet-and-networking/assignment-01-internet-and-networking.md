@@ -215,11 +215,8 @@ Add the following credit note at the end of your post:
 
 ## LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-micro-internship-activity-7473695494494531584-2xIW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
-```text
-Add your URL here...
-```
 
 ---
 
@@ -227,7 +224,29 @@ Add your URL here...
 
 Paste the full text of your LinkedIn post here:
 
-Add your post content here...
+My DevOps Learning Journey – Building Foundational Skills
+I’ve been exploring the basics of DevOps and core internet technologies through a structured learning exercise, and it has really helped me understand how everything connects behind the scenes.
+🔹 ChatGPT as a Learning Assistant
+I used ChatGPT to simplify complex networking concepts and guide me through practice tasks. It helped me learn faster by breaking down topics into clear, beginner-friendly explanations.
+
+🔹 Internet & Networking
+I learned how data moves across the internet using IP addresses, packet switching, and protocols like TCP/IP. I also understood how HTTP/HTTPS enables communication between browsers and servers.
+
+🔹 Application Architecture
+I explored how applications are structured using two-tier and three-tier architectures. Introducing a backend layer improves scalability, security, and overall system design.
+
+🔹 DNS (Domain Name System)
+DNS works like the internet’s phonebook, translating domain names into IP addresses. An A record is used to map a domain directly to an IPv4 address, allowing users to access servers easily.
+
+🔹 VS Code Setup (Hands-on Practice)
+I set up Visual Studio Code and worked with the integrated terminal using basic commands like pwd and ls. This helped me get comfortable with a real development environment.
+
+💡 This experience helped me see how networking, application design, and developer tools work together to power modern web systems.
+I’m excited to continue building and improving my DevOps skills step by step.
+
+P.S. This learning journey is part of the DevOps Micro Internship with Agentic AI Cohort run by Pravin Mishra https://lnkd.in/dUfughTR. Join the community here: https://lnkd.in/dp3W8PwC
+
+hashtag#DevOps hashtag#CloudComputing hashtag#Networking hashtag#Linux hashtag#AWS hashtag#TechJourney hashtag#LearningInPublic hashtag#BeginnerDeveloper hashtag#BuildInPublic
 
 ---
 

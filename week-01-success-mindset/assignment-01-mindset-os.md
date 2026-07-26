@@ -162,11 +162,7 @@ P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by 
 
 Paste your link here:
 
-<<<<<<< HEAD
 https://medium.com/@sundayinibehe75/building-without-borders-the-inibehe-emmanuel-story-58ab6af79b2d
-=======
-`Add your URL here`
->>>>>>> upstream/main
 
 ---
 
@@ -374,7 +370,7 @@ https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-mic
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: https://www.linkedin.com/feed/update/urn:li:activity:7478878036629733377/  
+- https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-micro-internship-activity-7478878036629733377-RKAY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ  
 - Blog / Medium : https://medium.com/@sundayinibehe75/week-1-of-the-dmi-micro-internship-success-mindset-this-week-wasnt-about-technical-skills-it-82a59b93b4af  
 
 ---

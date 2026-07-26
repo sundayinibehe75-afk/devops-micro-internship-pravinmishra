@@ -438,7 +438,7 @@ Gather was the Bash script collecting raw evidence (service status, port state, 
 
 Paste your LinkedIn post URL here:
 
-https://www.linkedin.com/feed/update/urn:li:ugcPost:7484960053918359552/
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7484960055239348224-Bly8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 

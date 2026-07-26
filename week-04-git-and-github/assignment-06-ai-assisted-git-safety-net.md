@@ -276,7 +276,7 @@ Publish a LinkedIn post summarizing what you built and what you learned about co
 
 #### LinkedIn Post URL
 
-https://www.linkedin.com/feed/update/urn:li:ugcPost:7486558407542411264/
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7486558408423415808-Rifv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
@@ -307,8 +307,6 @@ Add 3-5 bullet points on what you learned this week.
 ## GitHub Repository URL
 
 https://github.com/sundayinibehe75-afk/devops-micro-internship-pravinmishra
-
-`Add your URL here`
 
 ---
 

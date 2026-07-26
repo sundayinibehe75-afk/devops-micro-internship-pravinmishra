@@ -126,9 +126,7 @@ https://github.com/pravinmishraaws/devops-micro-internship-interviews/pull/391
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
-
-https://www.linkedin.com/feed/update/urn:li:share:7486405071111593984/
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7486405072617144320-oBjf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
@@ -151,7 +149,7 @@ https://www.linkedin.com/feed/update/urn:li:share:7486405071111593984/
 
 Paste your fork URL here:
 
-`Add your URL here`
+https://github.com/sundayinibehe75-afk/devops-micro-internship-interviews
 
 ---
 

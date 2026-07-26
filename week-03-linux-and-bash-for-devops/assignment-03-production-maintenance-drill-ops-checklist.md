@@ -310,13 +310,7 @@ Cloud resources should be stopped or terminated when no longer needed to elimina
 
 Paste your LinkedIn post URL here:
 
-<<<<<<< HEAD
-https://www.linkedin.com/feed/update/urn:li:ugcPost:7483892473786687488/
-=======
-`Add your URL here`
-
----
->>>>>>> upstream/main
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-devops-linux-activity-7483892475317608448-Tbqt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 #### Screenshot — Published LinkedIn post
 

@@ -92,8 +92,6 @@ Your post must include:
 
 #### Screenshot 2 — LinkedIn post published
 
-Add your screenshot here.
-
 ![alt text](screenshots/Linkedin-post-screenshot.png)
 
 ### Submission Field
@@ -101,7 +99,15 @@ Add your screenshot here.
 LinkedIn Post Content (copy-paste here):
 
 ```
-Paste your LinkedIn post content here
+My AI agent just remembered a project decision from a previous session — without me repeating it. This is what professional agentic DevOps looks like.
+
+In a brand new session, I asked it to add a JavaScript animation. It recalled a rule I had set earlier — no JavaScript on this project — and declined, without me reminding it.
+
+This is why memory matters in agentic AI. Without it, every session starts from zero and you repeat the same context, the same rules, the same decisions over and over. With memory, the agent carries project knowledge forward and actually respects it — closer to working with a teammate than a tool that forgets everything the moment you close the terminal.
+
+P.S. This post is a part of DevOps Micro Internship with Agentic AI Cohort-3 by Pravin Mishra. You can start your DevOps journey by joining this Discord community ( https://lnkd.in/dp3W8PwC )
+
+#DMIByPravinMishra #AgenticAI #ClaudeCode #DevOps
 ```
 
 ---

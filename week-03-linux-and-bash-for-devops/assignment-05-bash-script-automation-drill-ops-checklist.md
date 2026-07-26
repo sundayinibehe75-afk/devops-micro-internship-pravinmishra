@@ -330,15 +330,7 @@ Execution: Finally, the script triggers everything by calling the functions in o
 
 #### LinkedIn Post URL
 
-<<<<<<< HEAD
-https://www.linkedin.com/feed/update/urn:li:share:7484405883616083968/
-=======
-Paste your LinkedIn post URL here:
-
-`Add your URL here`
-
----
->>>>>>> upstream/main
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7484405884882870272-CAro?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 #### Screenshot — Published LinkedIn post
 
