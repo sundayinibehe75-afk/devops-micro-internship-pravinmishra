@@ -25,16 +25,16 @@ Take a screenshot of your interaction showing:
 
 Save your screenshot in the `screenshots` folder and update the file name below.
 
-![Task 1 Screenshot](screenshots/task-1-chatgpt.png)
-
-
-Replace `task-1-chatgpt.png` with your actual screenshot file name.
+![alt text](screenshots/Assignment-01-Task-01a.png)
+![alt text](screenshots/Assignment-01-Task-01b.png)
 
 ---
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+1. A protocol is a set of rules for communication.
+2. Protocols help computers send and receive information correctly.
+3. Without protocols, computers would not be able to understand each other or communicate reliably.
 
 ---
 
@@ -59,7 +59,8 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+When someone anywhere in the world visits the EpicReads website, their browser first finds the server in Finland using its IP address, which is like the server's unique home address on the internet. The browser and server communicate using the TCP/IP protocol suite. TCP (Transmission Control Protocol) breaks the data into small pieces called packets, ensures they arrive correctly, and puts them back in the right order. IP (Internet Protocol) helps each packet find the best route to the destination. This process is known as packet switching, where packets can travel along different paths before being reassembled. Finally, HTTP or the more secure HTTPS protocol is used to request and deliver the web pages. HTTPS also encrypts the data, helping protect users' personal information and online transactions.
+
 
 ---
 
@@ -89,12 +90,9 @@ EpicReads bookstore has two application versions:
 
 ## Diagram Screenshot / Photo
 
-Save your diagram image in the `screenshots` folder and update the file name below.
+![alt text](screenshots/Assignment-01-Task-03a.png)
 
-![Application Architecture Diagram](screenshots/task-3-diagram.png)
-
-
-Replace `task-3-diagram.png` with your actual diagram file name.
+![alt text](screenshots/Assignment-01-Task-03b.png)
 
 ---
 
@@ -102,18 +100,18 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* React
+* HTML/CSS
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* Node.js
+* Django
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* mySQL
+* postgreSQL
 
 ---
 
@@ -142,7 +140,8 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+The Domain Name System (DNS) is like the internet's phonebook. It translates a human-friendly domain name, such as epicreads.com, into an IP address that computers use to find a website. To connect epicreads.com to 52.172.142.222, you should use an A (Address) record because it maps a domain name directly to an IPv4 address. This allows users to access the website by typing the domain name instead of remembering the numeric IP address.
+
 
 ---
 
@@ -176,13 +175,7 @@ ls
 
 ## Screenshot
 
-Save your screenshot in the `screenshots` folder and update the file name below.
-
-![VS Code Setup Screenshot](screenshots/task-5-vscode.png)
-
-
-Replace `task-5-vscode.png` with your actual screenshot file name.
-
+![alt text](screenshots/Assignment-01-Task-05.png)
 ---
 
 # 🔗 Task 6: Publish Your Assignment as a LinkedIn Post
@@ -254,21 +247,19 @@ hashtag#DevOps hashtag#CloudComputing hashtag#Networking hashtag#Linux hashtag#A
 
 ### What did you find easy?
 
-Add your answer here...
+I found it easy to use ChatGPT to understand networking concepts in simple terms. It also helped me explain technical topics clearly and organise my answers for the tasks
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+The most challenging part was understanding how networking concepts such as packet switching, TCP/IP, DNS, and application architecture work together. Creating the application architecture diagram also took some time because I wanted to label each layer correctly.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
-
----
+Next week, I will spend more time practising networking fundamentals and creating diagrams on my own. I also want to improve my understanding of DNS, application architecture, and other DevOps concepts by doing more hands-on practice and reading the documentation.
 
 ## 📌 About DMI & CloudAdvisory
 
