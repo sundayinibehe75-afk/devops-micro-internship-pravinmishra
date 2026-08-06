@@ -20,13 +20,13 @@ Create the footer Story (`Add footer with version and deploy date`, 1 point, `fr
 
 #### Screenshot 1 — Sprint 1 created with the Story inside it
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Active Sprint board showing the Sprint Goal
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-01-screenshot-02.png)
 
 ---
 
@@ -40,25 +40,25 @@ Add the required footer text (`Pravin Mishra Portfolio v1.0 — Deployed on <DD 
 
 #### Screenshot 3 — Jira board showing the Day 1 Sub-task in Done
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-02-screenshot-03.png)
 
 ---
 
 #### Screenshot 4 — Successful Git commit output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-02-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — EC2 browser view showing the complete footer text, with the URL visible
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-02-screenshot-05.png)
 
 ---
 
 #### Screenshot 6 — Jira Story comment showing the Day 1 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-02-screenshot-06.png)
 
 ---
 
@@ -72,25 +72,25 @@ Update the footer so the deployment date is generated automatically (or updated 
 
 #### Screenshot 7 — Code editor showing the footer and date logic or deployment-time template snippet
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — EC2 browser view showing the updated footer with the current date
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-08.png)
 
 ---
 
 #### Screenshot 9 — README snippet documenting the footer and date behavior
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-09.png)
 
 ---
 
 #### Screenshot 10 — Jira Story comment showing the Day 2 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-10.png)
 
 ---
 
@@ -104,19 +104,19 @@ Improve the footer's spacing, contrast, and readability, then validate it at bot
 
 #### Screenshot 11 — Desktop EC2 view showing the polished footer
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Mobile responsive view showing the footer remains readable
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-12.png)
 
 ---
 
 #### Screenshot 13 — Jira Story comment showing the Day 3 Daily Scrum update
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-13.png)
 
 ---
 
@@ -130,7 +130,7 @@ Replace the existing homepage tagline with the required DMI Website call-to-acti
 
 #### Screenshot 14 — EC2 browser view showing "Start your DevOps Journey here" and the clickable "Visit the DMI Website" link
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-05-screenshot-14.png)
 
 ---
 
@@ -144,19 +144,20 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-06-screenshot-15.png)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-06-screenshot-16.png)
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-06-screenshot-17a.png)
+![alt text](screenshots/Assignment-03-Task-06-screenshot-17b.png)
 
 ---
 
@@ -164,7 +165,7 @@ Add your screenshot here.
 
 Paste your unlisted YouTube or accessible Google Drive demo-video link here:
 
-`Add your URL here`
+https://drive.google.com/file/d/1y6hzJKx-2-gbO3fyHawj8TuUULf3qTMD/view?usp=sharing
 
 ---
 
@@ -180,13 +181,13 @@ Publish a LinkedIn post about your five-day mini-Sprint, including your GitHub r
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-devops-activity-7491066290296565760-mXCq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-06-screenshot-18.png)
 
 ---
 
