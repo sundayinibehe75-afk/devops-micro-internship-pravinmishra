@@ -82,8 +82,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 04 → Git & GitHub 
  [![Week 04 – Git](./badges/week-04.svg)](./week-04-github/) 
 
-<!-- Week 05 → DevOps Lifecycle & Agile -->
-<!-- [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) -->
+ Week 05 → DevOps Lifecycle & Agile 
+ [![Week 05 – Agile](./badges/week-05.svg)](./week-05-devops-lifecycle/) 
 
 <!-- Week 06 → AWS Cloud -->
 <!-- [![Week 06 – AWS](./badges/week-06.svg)](./week-06-aws-cloud/) -->
@@ -136,7 +136,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 03 | Linux for DevOps | ✅ Completed | ✅ Solved  | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7484960055239348224-Bly8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/built-and-ran-an-ai-assisted-linux-incident-triage-workflow-76a329f3019b |
 | 04 | Bash Scripting | ✅ Completed | ✅ Solved  | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7484960055239348224-Bly8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/built-and-ran-an-ai-assisted-linux-incident-triage-workflow-76a329f3019b |
 | 05 | Git & GitHub | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-activity-7486558408423415808-Rifv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/building-an-ai-assisted-git-safety-net-pr-ready-check-dd98373f2bdc?sharedUserId=sundayinibehe75 |
-| 06 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
+| 06 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-share-7491641865973301248-RgrY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/built-an-ai-assistant-that-reads-my-jira-sprint-and-flags-at-risk-stories-but-can-never-touch-a-b20f09bff4fd |
 | 07 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 08 | Azure Cloud | ⬜ Not Started | ⏳ Pending | — | — |
 | 09 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
