@@ -130,7 +130,7 @@ The allowed-tools list includes only read-focused Jira tools: jira_search, jira_
 
 A Scrum Master relies on the board being trusted as ground truth for the whole team — velocity, burndown, and sprint health all depend on that data being accurate and only changed by deliberate human decisions. If an AI assistant could silently create, edit, or transition tickets, the Scrum Master would lose confidence that the board reflects what the team actually did, undermining the entire purpose of using it for transparency and inspection
 
-Add your answer here
+
 
 ---
 
