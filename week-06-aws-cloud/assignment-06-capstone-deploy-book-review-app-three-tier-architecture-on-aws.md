@@ -20,7 +20,7 @@ Create an architecture diagram showing the custom VPC (10.0.0.0/16), the six sub
 
 #### Diagram image or link
 
-Add your diagram image or link here.
+![alt text](screenshots/capstone_three_tier_architecture.png)
 
 ---
 
@@ -34,13 +34,41 @@ Record the AWS Region used and list every AWS service used across networking, co
 
 **Region:**
 
-Write your answer here.
+us-east-1 (N. Virginia)
 
 ---
 
 **Services:**
 
-Write your answer here.
+Networking:
+- Amazon VPC (custom VPC, 10.0.0.0/16)
+- Subnets (6 total — 2 public web tier, 2 private app tier, 
+  2 private DB tier, across 2 Availability Zones)
+- Internet Gateway
+- NAT Gateway (Regional mode)
+- Route Tables (public + private)
+- Security Groups (chained: web-alb-sg → web-ec2-sg → 
+  internal-alb-sg → app-ec2-sg → db-sg)
+
+Compute:
+- Amazon EC2 (2 instances — Web tier running Nginx + 
+  Next.js, App tier running Node.js/Express)
+
+Load Balancing:
+- Application Load Balancer × 2 (public-facing for the 
+  web tier, internal for the app tier)
+- Target Groups × 2
+
+Security:
+- IAM (RDS credentials, EC2 key pairs)
+- Security Groups (least-privilege chaining across all 
+  three tiers)
+- Private subnet isolation (App and DB tiers not publicly 
+  accessible, no Elastic IPs)
+
+Database:
+- Amazon RDS for MySQL (Multi-AZ, private subnet, with 
+  a read replica)
 
 ---
 
@@ -56,7 +84,7 @@ Confirm the Book Review App loads through the public ALB DNS name.
 
 Paste your public ALB DNS name here:
 
-`Add your URL here`
+http://web-alb-1996408286.us-east-1.elb.amazonaws.com/
 
 ---
 
@@ -70,37 +98,39 @@ Capture visual proof of every tier and load balancer.
 
 #### Web EC2
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-01.png)
 
 ---
 
 #### App EC2
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-02.png)
 
 ---
 
 #### Public ALB
 
-Add your screenshot here.
+
+![alt text](screenshots/Assignment-06-Task-04-screenshot-03.png)
 
 ---
 
 #### Internal ALB
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-04.png)
 
 ---
 
 #### RDS + Replica
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-05a.png)
+![alt text](screenshots/Assignment-06-Task-04-screenshot-05b.png)
 
 ---
 
 #### App UI proof
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-06.png)
 
 ---
 
@@ -114,19 +144,51 @@ Summarize what worked in the final deployment, the issues encountered and how ea
 
 **What worked:**
 
-Write your answer here.
+Successfully deployed a full production-style three-tier 
+architecture: a public web tier (Nginx + Next.js) behind 
+a public ALB, a fully private app tier (Node.js/Express) 
+behind an internal ALB, and a private RDS MySQL database 
+with a read replica (single-AZ, staying within Free Tier). 
+Security groups were chained end to end (web-alb-sg → 
+web-ec2-sg → internal-alb-sg → app-ec2-sg → db-sg), with 
+the app and database tiers genuinely unreachable from the 
+internet — no Elastic IPs anywhere in the architecture, 
+and a Regional NAT Gateway providing outbound access 
+without the single-point-of-failure risk of a single 
+Zonal NAT Gateway. The app successfully queries RDS 
+through the full chain and displays real data in the 
+browser.
 
 ---
 
 **Issues + fixes:**
 
-Write your answer here.
+1. Outbound security group rules were too narrowly scoped 
+   (only HTTP), blocking apt installs and GitHub clones 
+   over HTTPS — fixed by opening outbound traffic properly.
+
+2. Nginx's reverse proxy to the internal ALB was missing 
+   the port number (:3001), causing traffic to silently 
+   fail — fixed by adding the explicit port to proxy_pass.
+
+3. MySQL table names were case-sensitive (Books vs books) 
+   on this RDS instance, initially causing a "table doesn't 
+   exist" error during manual verification — resolved by 
+   matching the exact casing Sequelize created.
+
+4. SSH access to the private App tier instance required 
+   jumping through the Web tier instance using SSH agent 
+   forwarding, since the App tier has no public IP by design.
 
 ---
 
 **Tools/sources used:**
 
-Write your answer here.
+AWS Console (EC2, VPC, RDS, ELB), SSH with agent forwarding, 
+MySQL CLI for direct database verification, browser DevTools 
+Network tab for tracing the frontend API call, PM2 for 
+process management and logs, the app's own README and video 
+walkthrough for the correct database setup steps.
 
 ---
 
@@ -142,13 +204,13 @@ Publish a LinkedIn post sharing the capstone deployment, including the public AL
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-devops-activity-7494767742361735168-oiu-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### Screenshot of LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Linkedin-post.png)
 
 ---
 
