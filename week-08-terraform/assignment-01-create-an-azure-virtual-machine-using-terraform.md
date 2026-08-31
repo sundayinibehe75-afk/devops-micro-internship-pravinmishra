@@ -20,13 +20,15 @@ Create a `terraform-azure-vm` project and define the resource group, virtual net
 
 #### Screenshot 1 — VS Code showing `main.tf` and the required Azure resources
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-01-screenshot-01a.png)
+![alt text](screenshots/Assignment-01-Task-01-screenshot-01b.png)
+![alt text](screenshots/Assignment-01-Task-01-screenshot-01c.png)
 
 ---
 
 #### Screenshot 2 — `main.tf` showing the public IP output and VM authentication configuration, with the password hidden or redacted
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-01-screenshot-02.png)
 
 ---
 
@@ -40,7 +42,7 @@ Run `terraform init` and confirm the working directory initializes successfully.
 
 #### Screenshot 3 — Terminal showing successful `terraform init` output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-02-screenshot-03.png)
 
 ---
 
@@ -54,19 +56,20 @@ Review `terraform plan`, run `terraform apply`, and record the VM's public IP fr
 
 #### Screenshot 4 — Terraform plan summary showing the proposed resources
 
-Add your screenshot here.
-
+![alt text](screenshots/Assignment-01-Task-03-screenshot-04a.png)
+![alt text](screenshots/Assignment-01-Task-03-screenshot-04b.png)
+![alt text](screenshots/Assignment-01-Task-03-screenshot-04c.png)
 ---
 
 #### Screenshot 5 — Terraform apply output showing successful completion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-05.png)
 
 ---
 
 #### Screenshot 6 — Terraform output showing the public IP of the VM
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-06.png)
 
 ---
 
@@ -80,7 +83,7 @@ Use Azure CLI to confirm the VM was created and is running.
 
 #### Screenshot 7 — Azure CLI output showing the VM name and running status
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-04-screenshot-07.png)
 
 ---
 
@@ -94,7 +97,7 @@ Run `terraform destroy` to clean up the Azure resources after testing.
 
 #### Screenshot 8 — Terminal showing successful `terraform destroy` completion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-05-screenshot-08.png)
 
 ---
 
@@ -102,7 +105,10 @@ Add your screenshot here.
 
 Write a short paragraph explaining what you learned or any issues you encountered.
 
-Write your answer here.
+Creating Infrastructure using code is less time consuming, and it can be re-used  rather than multiple clicking in the console to create resources in the cloud. IaaC solves that problem.
+
+One of the issue i encountered, there was no public IP adress output in the terminal after the resouces was created. I fixed it by updating the output block in the main.tf file from 
+value = azurerm_public_ip.example.name to value = azurerm_public_ip.example.ip_address
 
 ---
 
