@@ -20,7 +20,7 @@ Create a `terraform-aws-vm` project directory for the AWS Terraform configuratio
 
 #### Screenshot 1 — File Explorer, VS Code, or terminal showing the `terraform-aws-vm` project directory
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-01.png)
 
 ---
 
@@ -34,7 +34,8 @@ Define the AWS provider, a VPC (10.0.0.0/16) with a public subnet (10.0.1.0/24) 
 
 #### Screenshot 2 (optional) — `main.tf` showing the VPC and EC2 resource blocks
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-02-screenshot-02a.png)
+![alt text](screenshots/Assignment-02-Task-02-screenshot-02b.png)
 
 ---
 
@@ -48,7 +49,7 @@ Run `terraform init` and confirm the working directory initializes successfully.
 
 #### Screenshot 3 — Terminal showing successful `terraform init` output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-03-screenshot-03.png)
 
 ---
 
@@ -62,13 +63,13 @@ Review `terraform plan`, run `terraform apply`, and record the EC2 instance's pu
 
 #### Screenshot 4 — Terraform apply output showing successful completion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — Terraform output showing the EC2 public IP
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-05.png)
 
 ---
 
@@ -82,13 +83,13 @@ Confirm the EC2 instance is running in the public subnet with a public IP, insta
 
 #### Screenshot 6 — EC2 instance running in the AWS Console, with the subnet and public IP visible
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-05-screenshot-06.png)
 
 ---
 
 #### Screenshot 7 — Browser showing the Nginx page through the EC2 public IP, or terminal showing a successful SSH connection
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-05-screenshot-07.png)
 
 ---
 
@@ -102,7 +103,7 @@ Run `terraform destroy` to remove the Terraform-managed AWS resources after test
 
 #### Screenshot 8 — Terminal showing successful `terraform destroy` completion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-08.png)
 
 ---
 
@@ -110,7 +111,7 @@ Add your screenshot here.
 
 Write a short paragraph about any challenges you faced and how you solved them.
 
-Write your answer here.
+i encountered an issues, terraform could not find the ssh key path i provided, since windows and git bash use different file paths. I fixed it by using git bash style instead of the standard windows path.
 
 ---
 
