@@ -20,13 +20,13 @@ Confirm your existing Terraform project reports no pending changes, then create 
 
 #### Screenshot 1 — `terraform plan` showing no pending changes
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Folder structure showing the new workspace folders alongside your Terraform project
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-01-screenshot-02.png)
 
 ---
 
@@ -40,7 +40,7 @@ Add a `CLAUDE.md` describing the read-only drift-review workflow and the safety 
 
 #### Screenshot 3 — `CLAUDE.md` open showing the project overview, review workflow, and safety rules
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-02-screenshot-03.png)
 
 ---
 
@@ -54,13 +54,14 @@ Create a Bash script that runs `terraform plan -detailed-exitcode`, converts the
 
 #### Screenshot 4 — The script open showing its destructive-change and open-ingress checks
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-03-screenshot-04a.png)
+![alt text](screenshots/Assignment-06-Task-03-screenshot-04b.png)
 
 ---
 
 #### Screenshot 5 — Terminal showing the script passes a syntax check and is executable
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-07a.png)
 
 ---
 
@@ -74,7 +75,7 @@ Run the script against your unchanged infrastructure and confirm it reports a he
 
 #### Screenshot 6 — Script output showing a healthy result against the clean baseline
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-06.png)
 
 ---
 
@@ -88,13 +89,14 @@ Turn the script into a `/tf-drift-review` skill that reads the drift report, exp
 
 #### Screenshot 7 — Skill file showing the tool restrictions and safety rules
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-07a.png)
+![alt text](screenshots/Assignment-06-Task-05-screenshot-07b.png)
 
 ---
 
 #### Screenshot 8 — `/tf-drift-review` output against the healthy baseline
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-08.png)
 
 ---
 
@@ -108,13 +110,13 @@ Deliberately introduce a change Terraform did not make — a destructive change 
 
 #### Screenshot 9 — The drift you introduced, visible in your Terraform config or the cloud console
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-06-screenshot-09.png)
 
 ---
 
 #### Screenshot 10 — `/tf-drift-review` output flagging the drift and explaining the risk
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-06-screenshot-10.png)
 
 ---
 
@@ -128,13 +130,13 @@ Extend the Week 2 hooks pattern with a `PreToolUse` hook that blocks any `terraf
 
 #### Screenshot 11 — `settings.json` showing the new `PreToolUse` hook
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-07-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Claude's blocked response when attempting `terraform apply` while the report is failing
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-07-screenshot-12.png)
 
 ---
 
@@ -148,13 +150,13 @@ Review the recommendation, resolve the drift yourself with a human-reviewed `ter
 
 #### Screenshot 13 — `terraform apply` completing successfully after your review
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-07-screenshot-13.png)
 
 ---
 
 #### Screenshot 14 — Second `/tf-drift-review` run showing a healthy result
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-07-screenshot-14.png)
 
 ---
 
@@ -162,7 +164,11 @@ Add your screenshot here.
 
 Explain why this workflow needs both a fixed-rule hook that blocks `apply` outright and an AI skill that explains the risk in plain language — why isn't one of the two enough on its own?
 
-Add your answer here
+The hook is a deterministic safety net — it blocks apply mechanically based on a fixed condition, with no judgment involved, so it can't be reasoned around or missed. But it can't explain why something is risky or help you decide what to do about it.
+
+The skill provides that understanding — it reads the drift and explains the actual risk in plain language, but as an AI interpretation, it's advisory, not a guarantee, and shouldn't be the only thing standing between you and a destructive change.
+
+Together: the hook guarantees nothing destructive slips through unnoticed, and the skill makes sure you actually understand what you're looking at before you fix it and unblock yourself.
 
 ---
 
