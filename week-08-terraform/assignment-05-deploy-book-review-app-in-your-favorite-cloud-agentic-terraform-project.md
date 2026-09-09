@@ -20,19 +20,20 @@ Create a custom VPC/VNet (10.0.0.0/16) with six subnets across two Availability 
 
 #### Screenshot 1 — VPC or VNet details showing 10.0.0.0/16
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Subnet list showing all six subnets, their tiers, CIDR ranges, and Availability Zones
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-02a.png)
+![alt text](screenshots/Assignment-05-Task-01-screenshot-02b.png)
 
 ---
 
 #### Screenshot 3 — Terraform plan or cloud networking view showing the required routing and tier isolation
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-03.png)
 
 ---
 
@@ -46,25 +47,26 @@ Configure tier-specific Security Groups/NSGs (Web Tier HTTP 80, App Tier 3001 on
 
 #### Screenshot 4 — Web, App, and Database Security Group or NSG rules
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-02-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — Public frontend load balancer configuration
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-02-screenshot-05.png)
 
 ---
 
 #### Screenshot 6 — Internal backend load balancer configuration
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-02-screenshot-06.png)
 
 ---
 
 #### Screenshot 7 — Healthy frontend and backend targets or backend pools
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-02-screenshot-07a.png)
+![alt text](screenshots/Assignment-05-Task-02-screenshot-07b.png)
 
 ---
 
@@ -78,19 +80,21 @@ Deploy the Next.js Web Tier behind Nginx on port 80 in the public subnets, and t
 
 #### Screenshot 8 — EC2 or Azure VM dashboard showing the frontend and backend VMs
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-03-screenshot-08.png)
 
 ---
 
 #### Screenshot 9 — Nginx status or frontend response on the Web Tier
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-03-screenshot-09a.png)
+![alt text](screenshots/Assignment-05-Task-03-screenshot-09b.png)
 
 ---
 
 #### Screenshot 10 — Backend API response through the permitted internal path
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-03-screenshot-10a.png)
+![alt text](screenshots/Assignment-05-Task-03-screenshot-10b.png)
 
 ---
 
@@ -104,31 +108,32 @@ Deploy a private managed MySQL database (Amazon RDS Multi-AZ or Azure Database f
 
 #### Screenshot 11 — Amazon RDS or Azure Database dashboard showing the primary database and read replica
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Evidence of private database networking and permitted App Tier access
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-12a.png)
+![alt text](screenshots/Assignment-05-Task-04-screenshot-12b.png)
 
 ---
 
 #### Screenshot 13 — Functional Book Review App homepage and login flow
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-13.png)
 
 ---
 
 #### Screenshot 14 — Functional review flow with working backend API and database integration
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-14.png)
 
 ---
 
 #### Screenshot 15 (optional) — Application logs or terminal output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-15.png)
 
 ---
 
@@ -136,7 +141,13 @@ Add your screenshot here.
 
 Report the cloud platform used (AWS or Azure), your Terraform code structure (`main.tf`, `variables.tf`, `outputs.tf`, and supporting files), a link/description of your architecture diagram, and the Public Load Balancer DNS used to access the frontend.
 
-Write your answer here.
+Cloud platform: AWS
+
+Terraform structure: Root module (main.tf, variables.tf, terraform.tfvars, outputs.tf) calling five child modules — networking (VPC, 6 subnets across 2 AZs, IGW, route table), security (chained SGs: public_alb_sg to web_sg to internal_alb_sg to app_sg to db_sg), compute (2 frontend + 2 backend EC2 instances), database (RDS primary with Multi-AZ and a read replica), loadbalancer (public ALB for frontend, internal ALB for backend). Built by extending the module structure from Assignment 4 rather than starting over.
+
+Architecture diagram: https://drive.google.com/file/d/1Wtj5BFyyDwZej-lZ-lMGIkd5qKTIuFOl/view?usp=sharing
+
+Public Load Balancer DNS: bookreview-public-alb-2044099115.us-east-1.elb.amazonaws.com
 
 ---
 
@@ -152,13 +163,13 @@ Publish a LinkedIn post about what you achieved in this assignment, with public 
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-activity-7503461204254924800-3ftz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### Screenshot 16 — Published LinkedIn post showing the text and at least one image or proof
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-04-screenshot-16.png)
 
 ---
 
