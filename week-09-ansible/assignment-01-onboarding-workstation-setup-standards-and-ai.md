@@ -20,13 +20,13 @@ Create and activate an isolated `.venv` inside `ansible-onboarding/`, install `a
 
 #### Screenshot 1 — Terminal showing the activated `.venv` and successful `ansible --version` output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Terminal showing successful `ansible-lint --version` output and `requirements.txt`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-01-screenshot-02.png)
 
 ---
 
@@ -40,13 +40,14 @@ Install the Ansible, YAML, and Python VS Code extensions, and create `.vscode/se
 
 #### Screenshot 3 — VS Code Extensions panel showing Ansible, YAML, and Python installed
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-02-screenshot-03.png)
 
 ---
 
 #### Screenshot 4 — VS Code showing `.vscode/settings.json` and `.editorconfig`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-02-screenshot-04a.png)
+![alt text](screenshots/Assignment-01-Task-02-screenshot-04b.png)
 
 ---
 
@@ -60,7 +61,7 @@ Create `ansible.cfg` in the project root with the team-friendly defaults and SSH
 
 #### Screenshot 5 — VS Code or terminal showing `ansible.cfg` in the project root with the supplied settings
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-05.png)
 
 ---
 
@@ -74,7 +75,7 @@ Generate or use an Ed25519 SSH key, load it into `ssh-agent`, and configure `~/.
 
 #### Screenshot 6 — Terminal showing `ssh-add -l` with the key loaded (do not expose private-key contents)
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-04-screenshot-06.png)
 
 ---
 
@@ -88,13 +89,13 @@ Configure Git identity and the `main` default branch, install `pre-commit`, add 
 
 #### Screenshot 7 — Terminal showing `pre-commit install` output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-05-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — Terminal showing `pre-commit run --all-files` passing
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-05-screenshot-08.png)
 
 ---
 
@@ -108,13 +109,13 @@ Document the workstation setup in `README.md`, including a "New Machine? Do This
 
 #### Screenshot 9 — Repository tree showing the required files
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-09.png)
 
 ---
 
 #### Screenshot 10 — `README.md` showing machine details and the "New Machine? Do This" checklist
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-10.png)
 
 ---
 
@@ -122,7 +123,9 @@ Add your screenshot here.
 
 State one thing that makes this setup team-friendly, and one pitfall you avoided (e.g. global pip, missing SSH agent). Note any corporate proxy or CA certificate steps, if applicable.
 
-Write your answer here.
+What makes this setup team-friendly:The inclusion of workspace-isolated configurations via .vscode/settings.json and a local pre-commit configuration ensures that every engineer who clones this project instantly shares the exact same automated code linting rules, tab/space formats, and execution paths. No one has to manually re-configure their global computer settings, which eliminates configuration drift and ensures code consistency across the team.
+
+One pitfall avoided:Global Python Pollution & Git Bash Output Hangs. We completely avoided installing Ansible and its linters using global system-level pip commands, which protects the host operating system utilities from conflicting packages. Additionally, we transitioned the pre-commit workflow from isolated remote repo downloads to a language: system hook model. This directly bypassed a well-known Git Bash and Windows terminal emulation bug that hangs indefinitely when downloading and compiling massive ansible-core dependency sets over network sockets.
 
 ---
 
