@@ -20,19 +20,19 @@ Provision four Ubuntu 22.04 VMs (`web1`, `web2`, `app1`, `db1`, Standard_B1s) wi
 
 #### Screenshot 1 — Terminal showing successful `terraform apply` output and `terraform output public_ips`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Azure Portal showing all four running Ubuntu VMs
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-02.png)
 
 ---
 
 #### Screenshot 3 — Network Security Group inbound rules showing SSH 22 and HTTP 80
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-03.png)
 
 ---
 
@@ -46,7 +46,9 @@ Connect to each of the four VMs as `azureuser` and run `hostname` remotely witho
 
 #### Screenshot 4 — Terminal showing successful `hostname` output from all four passwordless SSH tests
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-02-screenshot-04a.png)
+![alt text](screenshots/Assignment-02-Task-02-screenshot-04b.png)
+![alt text](screenshots/Assignment-02-Task-02-screenshot-04c.png)
 
 ---
 
@@ -60,7 +62,7 @@ Create `inventory.ini` mapping VM indices 0–1 to `[web]`, index 2 to `[app]`, 
 
 #### Screenshot 5 — Editor or terminal showing `inventory.ini` with the web, app, db, and all:vars sections
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-03-screenshot-05.png)
 
 ---
 
@@ -74,25 +76,25 @@ Run `ping`, `whoami`, and `uptime` against all hosts; install and start Nginx on
 
 #### Screenshot 6 — Terminal showing `ansible ping` SUCCESS for all four hosts
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-06.png)
 
 ---
 
 #### Screenshot 7 — Terminal showing `uptime` output for all four hosts
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — Terminal showing Nginx installation and service start on the web group
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-08.png)
 
 ---
 
 #### Screenshot 9 — Terminal showing `htop` installation on all hosts and group-targeted command output
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-09.png)
 
 ---
 
@@ -100,7 +102,7 @@ Add your screenshot here.
 
 Describe an issue you faced and how you fixed it, what you learned, when you'd use an ad-hoc command instead of a playbook, and one challenge you faced during SSH or inventory setup.
 
-Write your answer here.
+I encountered a "No such file or directory" error when attempting to SSH into the server. The issue occurred because my SSH keys were located outside of my current working directory. After copying the private key to the correct path within my virtual environment (.venv), I successfully established an SSH connection to the machine.
 
 ---
 
