@@ -20,7 +20,7 @@ Create the `static-web` project directory with `inventory.ini`, `site.yml`, a `f
 
 #### Screenshot 1 — Terminal or editor showing the complete `static-web` folder layout
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-01-screenshot-01.png)
 
 ---
 
@@ -34,7 +34,7 @@ Stage `index.html` from `https://github.com/pravinmishraaws/Azure-Static-Website
 
 #### Screenshot 2 — Editor or terminal showing `files/index.html` staged inside the `static-web` project
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-02-screenshot-02.png)
 
 ---
 
@@ -48,13 +48,16 @@ Write `site.yml` with three plays: Play 1 (install/start Nginx on `web`), Play 2
 
 #### Screenshot 3 — Editor showing the three plays in `site.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-03a.png)
+![alt text](screenshots/Assignment-03-Task-03-screenshot-03b.png)
+![alt text](screenshots/Assignment-03-Task-03-screenshot-03c.png)
 
 ---
 
 #### Screenshot 4 — Editor showing the copy task, file ownership/mode, handler, uri task, and HTTP 200 assertion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-03-screenshot-4a.png)
+![alt text](screenshots/Assignment-03-Task-03-screenshot-4b.png)
 
 ---
 
@@ -68,13 +71,13 @@ Run `ansible-playbook -i inventory.ini site.yml` and confirm all plays complete 
 
 #### Screenshot 5 — Terminal showing the `ansible-playbook` run and final recap with OK/changed results and no failures
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-05.png)
 
 ---
 
 #### Screenshot 6 — Terminal showing the successful localhost URI verification results
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-06.png)
 
 ---
 
@@ -88,7 +91,7 @@ Confirm the deployed static website is reachable directly from a web-server publ
 
 #### Screenshot 7 — Browser showing the static website loaded from a web-server public IP
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-05-screenshot-07.png)
 
 ---
 
@@ -96,7 +99,7 @@ Add your screenshot here.
 
 Describe an issue you faced and how you fixed it, what you learned, why installation and deployment were split into separate plays, and one benefit of using `copy` instead of cloning from Git directly.
 
-Write your answer here.
+ fixed my inventory issue by changing the target to hosts: web:app and merging the verification loop so both VMs were processed. Through this, I learned how to target multiple host groups simultaneously and dynamically validate them using controller host variables. The playbook splits installation and deployment to separate infrastructure setup from application management, allowing safe updates without impacting live website code. Finally, using copy instead of Git improves security by pushing files over the active SSH channel, eliminating the need for internet access or repository keys on the VMs.
 
 ---
 
