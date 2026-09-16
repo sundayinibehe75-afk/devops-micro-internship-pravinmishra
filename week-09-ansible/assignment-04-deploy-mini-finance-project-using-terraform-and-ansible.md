@@ -20,7 +20,7 @@ Create the `mini-finance` project with separate `terraform/` and `ansible/` subd
 
 #### Screenshot 1 — Terminal or editor showing the complete `mini-finance` project tree
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-01-screenshot-01.png)
 
 ---
 
@@ -34,19 +34,19 @@ Provision an Ubuntu 22.04 Standard_B1s VM with a public IP, SSH key authenticati
 
 #### Screenshot 2 — Terminal showing the end of a successful `terraform apply`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-02-screenshot-02.png)
 
 ---
 
 #### Screenshot 3 — Terminal showing `terraform output public_ip`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-02-screenshot-03.png)
 
 ---
 
 #### Screenshot 4 — Terraform code or Azure Portal showing NSG inbound rules for ports 22 and 80
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-02-screenshot-04.png)
 
 ---
 
@@ -60,7 +60,7 @@ Connect to the VM with SSH using the injected key and run `hostname` remotely wi
 
 #### Screenshot 5 — Terminal showing the successful passwordless SSH hostname check
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-03-screenshot-05.png)
 
 ---
 
@@ -74,13 +74,16 @@ Create `ansible/inventory.ini` and a three-play `site.yml` that installs Nginx a
 
 #### Screenshot 6 — Editor showing `inventory.ini` and the three plays in `site.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-04-screenshot-06a.png)
+![alt text](screenshots/Assignment-04-Task-04-screenshot-06b.png)
+![alt text](screenshots/Assignment-04-Task-04-screenshot-06c.png)
+![alt text](screenshots/Assignment-04-Task-04-screenshot-06d.png)
 
 ---
 
 #### Screenshot 7 — Terminal showing `ansible-playbook -i inventory.ini site.yml` with HTTP 200, assertion OK, and no failures
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-04-screenshot-07.png)
 
 ---
 
@@ -94,7 +97,7 @@ Confirm the Mini Finance site is publicly accessible and correctly served by Ngi
 
 #### Screenshot 8 — Browser showing the Mini Finance site loaded from `http://<public_ip>` with the URL visible
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-05-screenshot-08.png)
 
 ---
 
@@ -102,7 +105,7 @@ Add your screenshot here.
 
 Describe an issue you faced and how you fixed it, and what you learned.
 
-Write your answer here.
+I faced a "Host Key Verification" block while using Ansible in WSL because the automated tool couldn't interactively accept the new AWS server's security signature. I resolved it by setting ANSIBLE_HOST_KEY_CHECKING=False in the configuration files to safely bypass the manual handshake. This taught me that automated DevOps tools require non-interactive environments to run properly, making environment-specific path translations and silent configurations essential for smooth infrastructure deployment
 
 ---
 
@@ -118,13 +121,13 @@ Publish a LinkedIn post about the Terraform + Ansible deployment, mentioning the
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-activity-7506056771505938432-oG97?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### Screenshot — Published LinkedIn post showing the text and at least one image or proof
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-05-screenshot-09.png)
 
 ---
 
