@@ -20,94 +20,15 @@ Create separate directories and files for the Terraform infrastructure and Ansib
 
 ### Evidence
 
-#### Screenshot 1 — Terminal or editor showing the complete `mini-finance` project tree
+#### Screenshot 1 — Terminal or VS Code showing the complete `mini-finance` project structure
 
-![alt text](screenshots/Assignment-04-Task-01-screenshot-01.png)
-
----
-
-# Task 2 — Terraform — Azure VM + NSG (Ports 22/80)
-
-## Goal
-
-Provision an Ubuntu 22.04 Standard_B1s VM with a public IP, SSH key authentication, and an NSG allowing SSH (22) and HTTP (80), and output the public IP.
-
-### Evidence
-
-#### Screenshot 2 — Terminal showing the end of a successful `terraform apply`
-
-![alt text](screenshots/Assignment-04-Task-02-screenshot-02.png)
-
----
-
-#### Screenshot 3 — Terminal showing `terraform output public_ip`
-
-![alt text](screenshots/Assignment-04-Task-02-screenshot-03.png)
-
----
-
-#### Screenshot 4 — Terraform code or Azure Portal showing NSG inbound rules for ports 22 and 80
-
-![alt text](screenshots/Assignment-04-Task-02-screenshot-04.png)
-
----
-
-# Task 3 — Configure Passwordless SSH
-
-## Goal
-
-Connect to the VM with SSH using the injected key and run `hostname` remotely without a password prompt.
-
-### Evidence
-
-#### Screenshot 5 — Terminal showing the successful passwordless SSH hostname check
-
-![alt text](screenshots/Assignment-04-Task-03-screenshot-05.png)
-
----
-
-# Task 4 — Ansible — Multi-Play: Install → Deploy → Verify
-
-## Goal
-
-Create `ansible/inventory.ini` and a three-play `site.yml` that installs Nginx and Git, clones and deploys the Mini Finance repository to `/var/www/html/` with a reload handler, and verifies HTTP 200 from `localhost`.
-
-### Evidence
-
-#### Screenshot 6 — Editor showing `inventory.ini` and the three plays in `site.yml`
-
-![alt text](screenshots/Assignment-04-Task-04-screenshot-06a.png)
-![alt text](screenshots/Assignment-04-Task-04-screenshot-06b.png)
-![alt text](screenshots/Assignment-04-Task-04-screenshot-06c.png)
-![alt text](screenshots/Assignment-04-Task-04-screenshot-06d.png)
-
----
-
-#### Screenshot 7 — Terminal showing `ansible-playbook -i inventory.ini site.yml` with HTTP 200, assertion OK, and no failures
-
-![alt text](screenshots/Assignment-04-Task-04-screenshot-07.png)
-
----
-
-# Task 5 — Test End-to-End Functionality
-
-## Goal
-
-Confirm the Mini Finance site is publicly accessible and correctly served by Nginx.
-
-### Evidence
-
-#### Screenshot 8 — Browser showing the Mini Finance site loaded from `http://<public_ip>` with the URL visible
-
-![alt text](screenshots/Assignment-04-Task-05-screenshot-08.png)
+Add your screenshot here.
 
 ---
 
 ### Notes
 
-Describe an issue you faced and how you fixed it, and what you learned.
-
-I faced a "Host Key Verification" block while using Ansible in WSL because the automated tool couldn't interactively accept the new AWS server's security signature. I resolved it by setting ANSIBLE_HOST_KEY_CHECKING=False in the configuration files to safely bypass the manual handshake. This taught me that automated DevOps tools require non-interactive environments to run properly, making environment-specific path translations and silent configurations essential for smooth infrastructure deployment
+Add your task notes here.
 
 ---
 
@@ -346,13 +267,100 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-activity-7506056771505938432-oG97?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
+`Add your URL here`
 
 ---
 
 ### LinkedIn Submission Notes
 
-![alt text](screenshots/Assignment-04-Task-05-screenshot-09.png)
+**One challenge you faced and how you fixed it:**
+
+Add your answer here.
+
+---
+
+**One real-world example where you can use this learning:**
+
+Add your answer here.
+
+---
+
+# Assignment Questions
+
+Answer the following in your own words:
+
+**1. What did you provision using Terraform in this assignment?**
+
+Add your answer here.
+
+---
+
+**2. What did Ansible configure and deploy in this assignment?**
+
+Add your answer here.
+
+---
+
+**3. Why is SSH access on port `22` restricted to your public IP address?**
+
+Add your answer here.
+
+---
+
+**4. Why is HTTP port `80` open to the internet?**
+
+Add your answer here.
+
+---
+
+**5. What is the purpose of the Ansible inventory file?**
+
+Add your answer here.
+
+---
+
+**6. Why does the playbook use separate plays for install, deploy, and verify?**
+
+Add your answer here.
+
+---
+
+**7. Why is `rsync` useful when deploying website files?**
+
+Add your answer here.
+
+---
+
+**8. What does the Ansible `uri` module verify in this assignment?**
+
+Add your answer here.
+
+---
+
+**9. What issue did you face during this assignment, and how did you fix it?**
+
+Add your answer here.
+
+---
+
+**10. What did you learn from using Terraform and Ansible together?**
+
+Add your answer here.
+
+---
+
+# Required Files
+
+Confirm that the following files are included in your assignment folder:
+
+- [ ] `.gitignore`
+- [ ] `README.md`
+- [ ] `terraform/providers.tf`
+- [ ] `terraform/main.tf`
+- [ ] `terraform/variables.tf`
+- [ ] `terraform/outputs.tf`
+- [ ] `ansible/inventory.ini`
+- [ ] `ansible/site.yml`
 
 ---
 
