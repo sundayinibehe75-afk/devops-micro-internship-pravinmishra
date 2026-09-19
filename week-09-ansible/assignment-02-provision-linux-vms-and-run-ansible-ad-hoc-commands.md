@@ -24,19 +24,19 @@ This project will use the Git repository and Ansible controller prepared in Assi
 
 #### Screenshot 1 — Terminal showing the complete `ansible-adhoc-lab` project structure
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-01.png)
 
 ---
 
 #### Screenshot 2 — Terminal showing `git status --short` with the new project files and updated `.gitignore`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-01-screenshot-02.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Reused the Ansible controller and Git repository from Assignment 01, creating ansible-adhoc-lab/ as a new project subfolder rather than a separate repo — kept infrastructure, venv, and config shared across all projects while keeping each project's own inventory/config isolated.
 
 ---
 
@@ -57,25 +57,26 @@ Do not configure both providers for this assignment.
 
 #### Screenshot 3 — Terraform configuration showing the three or four server roles and the `for_each` or `count` implementation
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-02-screenshot-03.png)
 
 ---
 
 #### Screenshot 4 — Terraform configuration showing SSH restricted to the controller IP and HTTP allowed only for web hosts
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-02-screenshot-4a.png)
+![alt text](screenshots/Assignment-02-Task-02-screenshot-4b.png)
 
 ---
 
 #### Screenshot 5 — Terraform output configuration showing how public IP addresses are associated with the server roles
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-02-screenshot-05.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Split into a base SG (SSH only, scoped to my controller IP) and a web SG (adds HTTP, open to the internet) — web instances get both, app/db only get base. All four VMs have public IPs since SSH needs to reach them directly from my local controller, no bastion involved; isolation is enforced by the SG rules, not by hiding the IP. Scaled to 4 instances by adding web2 and switching the SG conditional to contains() instead of a single equality check.
 
 ---
 
@@ -89,25 +90,25 @@ Initialize and validate the Terraform configuration, review the execution plan, 
 
 #### Screenshot 6 — Final `terraform apply` output showing `Apply complete`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-03-screenshot-06.png)
 
 ---
 
 #### Screenshot 7 — `terraform output public_ips` showing the role-to-IP mapping for all three or four VMs
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-03-screenshot-07.png)
 
 ---
 
 #### Screenshot 8 — Azure Portal or AWS Management Console showing all three or four VMs in the `Running` state, with their role-based names visible
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-03-screenshot-08.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+terraform apply initially failed with a duplicate key pair error — terraform-aws-vm-key was already registered in my AWS account from an earlier project. Fixed by giving this project's key pair a distinct name (ansible-adhoc-lab-key) and pointing it at a fresh key generated natively in WSL, rather than reusing the old Windows-side key across projects — avoids the same naming collision happening again on future projects
 
 ---
 
@@ -121,13 +122,16 @@ Verify that each managed VM can be accessed from the Ansible controller using SS
 
 #### Screenshot 9 — Terminal showing successful SSH hostname output from all VMs
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-04-screenshot-09a.png)
+![alt text](screenshots/Assignment-02-Task-04-screenshot-09b.png)
+![alt text](screenshots/Assignment-02-Task-04-screenshot-09c.png)
+![alt text](screenshots/Assignment-02-Task-04-screenshot-09d.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Verified SSH key-based access to all four VMs from the controller using the ED25519 key generated natively in WSL — no password prompts, confirming the key pair Terraform registered matches what's loaded in the local ssh-agent. Since app1 and db1 have public IPs but their security group only permits SSH from my controller's specific IP, this also confirmed the SG restriction is correctly scoped — access works from my machine but wouldn't from anywhere else.
 
 ---
 
@@ -143,19 +147,19 @@ The inventory allows Ansible to run commands against all servers, or only specif
 
 #### Screenshot 10 — `inventory.ini` showing the `web`, `app`, and `db` groups
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-05-screenshot-10.png)
 
 ---
 
 #### Screenshot 11 — Output of `ansible-inventory -i inventory.ini --graph`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-05-screenshot-11.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Grouped the inventory by role (web, app, db) matching the Terraform output's role-based naming, with shared connection settings (user, private key) set once under [all:vars] rather than repeated per host or group. Initially had ProxyJump configured on the app/db groups, assuming they'd need a bastion hop — removed it once I confirmed all four VMs have direct public IPs and SSH access, since ProxyJump is only needed when a host has no public IP at all.
 
 ---
 
@@ -171,43 +175,43 @@ This task proves that the inventory is working and that Ansible can control mult
 
 #### Screenshot 12 — Output of `ansible all -i inventory.ini -m ping`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-12.png)
 
 ---
 
 #### Screenshot 13 — Output of `ansible all -i inventory.ini -m command -a "uptime"`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-13.png)
 
 ---
 
 #### Screenshot 14 — Output of `ansible web -i inventory.ini -m apt -a "name=nginx state=present update_cache=yes" --become`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-14.png)
 
 ---
 
 #### Screenshot 15 — Output of `ansible web -i inventory.ini -m service -a "name=nginx state=started enabled=yes" --become`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-15.png)
 
 ---
 
 #### Screenshot 16 — Output of `ansible all -i inventory.ini -m apt -a "name=htop state=present update_cache=yes" --become`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-16.png)
 
 ---
 
 #### Screenshot 17 — Output of `ansible web -i inventory.ini -m command -a "systemctl is-active nginx"`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-17.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Initial ping failed across all hosts with Permission denied (publickey), even though a direct manual SSH connection worked fine — turned out my key has a passphrase, and Ansible has no way to supply it interactively the way a manual SSH session does. Fixed by loading the key into ssh-agent once (ssh-add) before running any Ansible commands, so the unlocked key stays available in memory for the rest of the session without needing the passphrase again. host_key_checking = False in ansible.cfg wasn't the cause here, but still correctly handles a separate concern — accepting new host fingerprints non-interactively.
 
 ---
 
@@ -219,13 +223,13 @@ Add your task notes here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-activity-7507039934034395136-KFQT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-02-Task-06-screenshot-18.png)
 
 ---
 
@@ -235,37 +239,37 @@ Answer the following in your own words:
 
 **1. What is the purpose of an Ansible inventory file?**
 
-Add your answer here.
+It tells Ansible which machines exist and how to reach them, and lets you organize them into groups so commands can target all hosts at once or just a specific subset.
 
 ---
 
 **2. What is the difference between the `web`, `app`, and `db` groups in your inventory?**
 
-Add your answer here.
+They separate hosts by role rather than just listing every IP together — web holds the two web-tier instances, app the application-tier instance, and db the database instance — so an ad-hoc command can be scoped to exactly the tier it's meant for, like installing Nginx only on web rather than every host.
 
 ---
 
 **3. What does the Ansible `ping` module verify?**
 
-Add your answer here.
+That Ansible can actually connect to and authenticate against the host — it doesn't test network reachability like ICMP ping, it confirms SSH access and that Python is available on the remote machine for Ansible to run modules at all.
 
 ---
 
 **4. Why do package installation commands require `--become`?**
 
-Add your answer here.
+Installing packages needs root privileges, and the ubuntu user connects over SSH without them by default — --become tells Ansible to escalate to sudo for that specific task, the same way you'd type sudo apt install manually.
 
 ---
 
 **5. When would you use an ad-hoc command instead of a playbook?**
 
-Add your answer here.
+For a one-off, immediate action — checking uptime, installing a single package, restarting a service — where writing and saving a whole playbook would be overkill for something you're not going to repeat or need to track as reusable automation.
 
 ---
 
 **6. What is one challenge you faced while setting up SSH or inventory, and how did you fix it?**
 
-Add your answer here.
+ping failed on every host with Permission denied (publickey), even though a direct manual SSH connection worked. My key has a passphrase, and Ansible couldn't supply it non-interactively. Fixed it by loading the key into ssh-agent with ssh-add before running Ansible, so the unlocked key stayed available in memory for the rest of the session.
 
 ---
 
