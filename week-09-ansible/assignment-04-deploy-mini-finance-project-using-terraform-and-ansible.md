@@ -22,13 +22,13 @@ Create separate directories and files for the Terraform infrastructure and Ansib
 
 #### Screenshot 1 — Terminal or VS Code showing the complete `mini-finance` project structure
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-01-screenshot-01.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Kept the same terraform/ and ansible/ split from the earlier Mini Finance build, since the project structure itself is provider-agnostic — only the contents of terraform/ needed to change for AWS.
 
 ---
 
@@ -42,19 +42,19 @@ Use Terraform to provision an Ubuntu Virtual Machine with the required Azure net
 
 #### Screenshot 2 — Terraform code showing the `Allow-SSH` rule for port `22` and the `Allow-HTTP` rule for port `80`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-02-screenshot-02.png)
 
 ---
 
 #### Screenshot 3 — Terraform code showing the association between `nsg-mini-finance` and `nic-mini-finance`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-02-screenshot-03.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Built the AWS equivalent of this task's Azure requirements: a Security Group with SSH restricted to my IP and HTTP open to the internet (same as Allow-SSH/Allow-HTTP), and the security group attached directly to the instance via vpc_security_group_ids rather than through a separate NIC resource, since AWS manages the network interface automatically.
 
 ---
 
@@ -68,19 +68,19 @@ Format and validate the Terraform configuration, review the execution plan, and 
 
 #### Screenshot 4 — End of the `terraform apply` output showing `Apply complete!` with no errors
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-03-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — Output of `terraform output public_ip` showing the VM’s public IP address
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-03-screenshot-05.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+terraform apply completed cleanly on the first run, reusing the same AMI lookup and key pair pattern from earlier AWS projects — no new issues here since the underlying Terraform structure was already proven.
 
 ---
 
@@ -94,13 +94,13 @@ Confirm that the Ansible controller can connect to the Terraform-provisioned Azu
 
 #### Screenshot 6 — Passwordless SSH command and the returned `mini-finance` hostname
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-04-screenshot-06.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Confirmed passwordless SSH using the same ED25519 key loaded in ssh-agent from earlier in the session — no passphrase prompt, confirming the key registered by Terraform matches what's already unlocked locally.
 
 ---
 
@@ -114,7 +114,7 @@ Add the Terraform-provisioned Azure VM to the Ansible inventory and confirm that
 
 #### Screenshot 7 — Ansible ping output showing `SUCCESS` and `pong` from the Azure VM
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-05-screenshot-07.png)
 
 ---
 
@@ -123,7 +123,12 @@ Add your screenshot here.
 Copy and paste the complete contents of your `ansible/inventory.ini` file below:
 
 ```ini
-Add your inventory.ini content here.
+[web]
+98.92.168.47
+
+[web:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/terraform-aws-vm-key
 ```
 
 ---
@@ -145,7 +150,8 @@ Screenshot must show:
 - Nginx service configured as started and enabled
 - Beginning of Play 2 with the Git repository URL and synchronization task
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-06-screenshot-08a.png)
+![alt text](screenshots/Assignment-04-Task-06-screenshot-08b.png)
 
 ---
 
@@ -159,7 +165,8 @@ Screenshot must show:
 - Play 3 targeting `localhost`
 - The `uri` verification and `assert` condition
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-06-screenshot-09a.png)
+![alt text](screenshots/Assignment-04-Task-06-screenshot-09b.png)
 
 ---
 
@@ -168,7 +175,82 @@ Add your screenshot here.
 Copy and paste the complete contents of your `ansible/site.yml` file below:
 
 ```yaml
-Add your site.yml content here.
+--
+- name: Install and configure Nginx
+  hosts: web  # <-- Updated to target both groups
+  become: true
+  tasks:
+    - name: Update the APT package cache
+      ansible.builtin.apt:
+        update_cache: true
+
+    - name: Install Nginx, Git, and rsync
+      ansible.builtin.apt:
+        name:
+          - nginx
+          - git
+          - rsync
+        state: present
+
+    - name: Start and enable Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
+
+- name: Clone and deploy the Mini Finance website
+  hosts: web
+  become: true
+  handlers:
+    - name: Reload nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+
+  tasks:
+    - name: Clone the Mini Finance repository
+      ansible.builtin.git:
+        repo: 'https://github.com/pravinmishraaws/mini_finance.git'
+        dest: /opt/mini-finance
+        version: main
+        force: yes
+
+    - name: Synchronize website files to web root
+      ansible.posix.synchronize:
+        src: /opt/mini-finance/
+        dest: /var/www/html/
+        delete: no
+        rsync_opts:
+          - "--exclude=.git"
+      delegate_to: "{{ inventory_hostname }}"
+      notify: Reload nginx
+
+    - name: Ensure proper ownership of web root
+      ansible.builtin.file:
+        path: /var/www/html
+        owner: www-data
+        group: www-data
+        recurse: yes
+
+- name: Verify the deployment from the controller
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Send HTTP request to web server
+      ansible.builtin.uri:
+        url: "http://{{ hostvars[groups['web'][0]]['inventory_hostname'] }}"
+        status_code: 200
+        return_content: no
+      register: webpage
+
+    - name: Assert that website returned HTTP 200
+      ansible.builtin.assert:
+        that:
+          - webpage.status == 200
+        fail_msg: "Website returned status {{ webpage.status }} instead of 200"
+        success_msg: "Mini Finance website returned HTTP 200 OK"
+
 ```
 
 ---
@@ -183,25 +265,25 @@ Validate the syntax of the multi-play Ansible playbook and run it to install Ngi
 
 #### Screenshot 10 — Successful playbook syntax check showing `playbook: site.yml`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-10.png)
 
 ---
 
 #### Screenshot 11 — Play 3 output showing the successful HTTP verification and assertion
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-11.png)
 
 ---
 
 #### Screenshot 12 — Final `PLAY RECAP` showing `failed=0` and `unreachable=0`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-12.png)
 
 ---
 
 ### Notes
 
-Add your task notes here.
+Syntax check and full playbook run both completed cleanly, reusing the install/deploy/verify structure from the earlier Mini Finance build with the git clone + rsync deployment method, since this assignment's Task 6 specifically asks for that approach rather than the copy module used in the static-web assignment.
 
 ---
 
@@ -215,7 +297,7 @@ Confirm that the Mini Finance website is publicly accessible through the Azure V
 
 #### Screenshot 13 — Mini Finance website successfully loading in the browser, with the Azure VM’s public IP address visible in the address bar
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-08-screenshot-13.png)
 
 ---
 
@@ -224,7 +306,7 @@ Add your screenshot here.
 Add your deployed website URL below:
 
 ```text
-http://<PUBLIC_IP>
+http://98.92.168.47
 ```
 
 ---
@@ -239,7 +321,9 @@ Create a `README.md` file to document the Mini Finance infrastructure and deploy
 
 #### Screenshot 14 — Completed `README.md` displayed in the VS Code Markdown preview or terminal
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-09-screenshot-14a.png)
+![alt text](screenshots/Assignment-04-Task-09-screenshot-14b.png)
+![alt text](screenshots/Assignment-04-Task-09-screenshot-14c.png)
 
 ---
 
@@ -248,7 +332,67 @@ Add your screenshot here.
 Copy and paste the complete contents of your `README.md` file below:
 
 ```markdown
-Add your README.md content here.
+**Author:** Inibehe Emmanuel Sunday
+
+**Cloud Platform:** AWS (substituted for Azure — see note below)
+
+**Server URL:** http://98.92.168.47
+
+## Platform Note
+
+This assignment was written for Azure, but was built on AWS instead since my Azure free tier had expired. Resource names and screenshots reflect AWS equivalents:
+
+- Azure NSG → AWS Security Group (same ingress rules: SSH 22 restricted to my IP, HTTP 80 open)
+- Azure NIC-to-NSG association → AWS attaches the security group directly to the instance via `vpc_security_group_ids` and `subnet_id` on the `aws_instance` resource, since AWS manages the underlying network interface automatically rather than requiring it as a separate resource
+
+## What This Project Does
+
+Provisions an AWS EC2 instance with Terraform, then uses a three-play Ansible playbook to install Nginx, deploy the Mini Finance website by cloning it from Git, and verify the deployment over HTTP.
+
+## Project Structure
+
+mini-finance/
+├── terraform/
+│ ├── main.tf
+│ ├── variables.tf
+│ └── outputs.tf
+├── ansible/
+│ ├── ansible.cfg
+│ ├── inventory.ini
+│ └── site.yml
+└── README.md
+
+
+## How It Works
+
+**Play 1 — Install and configure Nginx** (`hosts: web`)
+Updates the APT cache, installs Nginx, Git, and rsync, and ensures Nginx is started and enabled.
+
+**Play 2 — Clone and deploy the Mini Finance website** (`hosts: web`)
+Clones the Mini Finance repository, synchronizes the site files to `/var/www/html/`, sets ownership to `www-data:www-data`, and triggers a handler to reload Nginx.
+
+**Play 3 — Verify the deployment** (`hosts: localhost`)
+Sends an HTTP request to the server and asserts the response returns status 200.
+
+## What I Learned
+
+- Azure and AWS handle networking with a different number of layers — Azure treats the NIC as its own resource requiring an explicit NSG association, while AWS collapses that into a single attribute on the instance itself. The underlying concept (which security rules apply to this machine's network traffic) is the same; only how many separate resources it takes to express it differs.
+- Reusing a playbook across cloud providers works cleanly, since Ansible operates on the VM's OS once SSH access exists — the provisioning layer changes between Terraform providers, but the configuration layer doesn't need to.
+
+## Running This Project
+
+cd terraform
+
+terraform init
+
+terraform apply
+
+cd ../ansible
+
+ansible-playbook -i inventory.ini site.yml --syntax-check
+
+ansible-playbook -i inventory.ini site.yml
+
 ```
 
 ---
@@ -259,7 +403,7 @@ Add your README.md content here.
 
 #### Screenshot 15 — Published LinkedIn post showing the text and at least one deployment screenshot
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-09-screenshot-15.png)
 
 ---
 
@@ -267,7 +411,7 @@ Add your screenshot here.
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-activity-7506056771505938432-oG97?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
@@ -275,13 +419,13 @@ Paste your LinkedIn post URL here:
 
 **One challenge you faced and how you fixed it:**
 
-Add your answer here.
+The real friction this time wasn't the tools themselves, but the environment underneath them — I built everything through WSL on Windows, and Ansible kept throwing connection errors because the private key's Windows-side permissions were too open for Linux SSH standards, which also triggered host key verification failures since Ansible runs non-interactively. Fixed it by moving the key entirely into WSL's native filesystem, locking it to 0600, and disabling strict host key checking in a local ansible.cfg.
 
 ---
 
 **One real-world example where you can use this learning:**
 
-Add your answer here.
+This same Terraform + Ansible pairing is exactly how teams handle disaster recovery or platform migration — if a company needed to move a workload from Azure to AWS (or vice versa) due to cost, an outage, or a vendor change, the Terraform layer gets rewritten for the new provider, but the Ansible configuration layer — installing software, deploying the app, verifying it's live — carries over largely unchanged, since it operates on the VM's OS rather than the cloud provider itself.
 
 ---
 
@@ -291,61 +435,61 @@ Answer the following in your own words:
 
 **1. What did you provision using Terraform in this assignment?**
 
-Add your answer here.
+An EC2 instance, VPC, subnet, internet gateway, route table, and a security group allowing SSH from my IP and HTTP from anywhere — the AWS equivalent of this assignment's original Azure VM, NSG, and NIC requirements.
 
 ---
 
 **2. What did Ansible configure and deploy in this assignment?**
 
-Add your answer here.
+Installed Nginx, Git, and rsync; cloned the Mini Finance repository; synchronized the site files into the web root with correct ownership; and verified the site returned HTTP 200.
 
 ---
 
 **3. Why is SSH access on port `22` restricted to your public IP address?**
 
-Add your answer here.
+So only I can manage the server directly — leaving SSH open to the whole internet is one of the most common ways a server gets compromised, since it's constantly scanned and targeted by automated attacks.
 
 ---
 
 **4. Why is HTTP port `80` open to the internet?**
 
-Add your answer here.
+So only I can manage the server directly — leaving SSH open to the whole internet is one of the most common ways a server gets compromised, since it's constantly scanned and targeted by automated attacks.
 
 ---
 
 **5. What is the purpose of the Ansible inventory file?**
 
-Add your answer here.
+It tells Ansible which machines to manage and how to reach them, letting commands and playbooks target specific hosts or groups instead of needing the connection details repeated everywhere.
 
 ---
 
 **6. Why does the playbook use separate plays for install, deploy, and verify?**
 
-Add your answer here.
+Each play has one clear responsibility, so a failure is easy to isolate — and it lets verification run from a different host (the controller) than installation and deployment, which run on the actual server.
 
 ---
 
 **7. Why is `rsync` useful when deploying website files?**
 
-Add your answer here.
+It only transfers files that have actually changed rather than copying everything every time, and it can exclude specific paths like .git, making repeated deployments faster and cleaner than a full copy.
 
 ---
 
 **8. What does the Ansible `uri` module verify in this assignment?**
 
-Add your answer here.
+That the deployed site actually responds to an HTTP request with status 200, confirming it's live and reachable, not just that the files were placed on disk correctly
 
 ---
 
 **9. What issue did you face during this assignment, and how did you fix it?**
 
-Add your answer here.
+Same environment-level SSH permission issue described above — Windows-side key permissions being too open for WSL's SSH client, requiring the key to be moved into WSL's own filesystem and locked to 0600.
 
 ---
 
 **10. What did you learn from using Terraform and Ansible together?**
 
-Add your answer here.
+That they cleanly divide responsibility by layer — Terraform provisions the infrastructure and is provider-specific, while Ansible configures whatever's running on top of it and stays largely provider-agnostic, since it just needs SSH access to do its job regardless of which cloud created the machine.
 
 ---
 
