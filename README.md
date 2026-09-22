@@ -91,11 +91,11 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 07 → Azure Cloud 
  [![Week 07 – Azure](./badges/week-07.svg)](./week-07-azure-cloud/) 
 
-<!-- Week 08 → Terraform -->
-<!-- [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) -->
+ Week 08 → Terraform 
+ [![Week 08 – Terraform](./badges/week-08.svg)](./week-08-terraform/) 
 
-<!-- Week 09 → Ansible -->
-<!-- [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) -->
+ Week 09 → Ansible 
+ [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) 
 
 <!-- Week 10 → Azure DevOps CI/CD -->
 <!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
@@ -139,8 +139,8 @@ This is not a course. It is an internship-style program — real deployments, re
 | 06 | DevOps Lifecycle & Agile | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-claudecode-share-7491641865973301248-RgrY/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/built-an-ai-assistant-that-reads-my-jira-sprint-and-flags-at-risk-stories-but-can-never-touch-a-b20f09bff4fd |
 | 07 | AWS Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-agenticai-devops-activity-7494767742361735168-oiu-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/deployed-the-capstone-this-week-a-book-review-app-on-a-genuine-three-tier-production-style-65e4895e0d78 |
 | 08 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-azure-devops-activity-7498018552239808513-Ax0K?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/completed-my-azure-three-tier-production-capstone-for-dmi-the-book-review-app-next-js-a1874554b45c |
-| 09 | Terraform | ⬜ Not Started | ⏳ Pending | — | — |
-| 10 | Ansible | ⬜ Not Started | ⏳ Pending | — | — |
+| 09 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-ugcPost-7502686250517164034-B4x9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/deployed-epicbook-on-aws-using-terraform-this-time-built-entirely-as-reusable-modules-instead-of-c5485be7f745 |
+| 10 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-ugcPost-7506056770126082048-bgza/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/terraform-provisions-it-ansible-configures-it-finally-built-the-full-pairing-end-to-end-this-a724a3fed899 |
 | 11 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
 | 12 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 13 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
