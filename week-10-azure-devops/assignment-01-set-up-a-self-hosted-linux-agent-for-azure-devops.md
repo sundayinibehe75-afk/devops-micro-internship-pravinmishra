@@ -58,7 +58,7 @@ Add a screenshot from AWS or Azure showing:
 * VM status as **Running**
 * Public IP address
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-01.png)
 
 ---
 
@@ -72,7 +72,7 @@ Add an SSH terminal screenshot showing the output of:
 
 The screenshot must confirm a supported Ubuntu version, `x86_64` architecture, and a successful HTTP response from Azure DevOps.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-02.png)
 
 ---
 
@@ -93,7 +93,7 @@ Add a terminal screenshot showing:
 * Agent service start
 * `sudo ./svc.sh status` reporting that the service is running
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-04-screenshot-03.png)
 
 > Ensure that the PAT is not visible.
 
@@ -116,7 +116,7 @@ Add a screenshot of the Azure DevOps Agent Pool **Agents** page showing:
 * Agent status as **Online**
 * Agent enabled and available
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-05-screenshot-04.png)
 
 ---
 
@@ -138,7 +138,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * Your Full Name
 * Linux verification commands
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-05.png)
 
 ---
 
@@ -156,7 +156,11 @@ Add a screenshot of the successful Azure DevOps pipeline run showing:
 * Output from `df -h`
 * Output from `pwd`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06a.png)
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06b.png)
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06c.png)
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06d.png)
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06e.png)
 
 ---
 
@@ -165,7 +169,25 @@ Add your screenshot here.
 Paste the contents of your completed `azure-pipelines.yml` file below.
 
 ```yaml
-# Paste your completed azure-pipelines.yml here
+trigger:
+- none
+
+pool:
+  name: SelfHostedPool
+
+steps:
+- script: echo Inibehe Emmanuel Sunday 
+  displayName: 'Show full name'
+  
+- script: uname -a
+  displayName: 'Show system info'
+
+- script: whoami
+  displayName: 'Show current user'
+
+- script: df -h
+  displayName: 'Show disk usage'
+
 ```
 
 > Do not include your PAT, SSH private key, password, or cloud credentials in the YAML file.
@@ -176,7 +198,7 @@ Paste the contents of your completed `azure-pipelines.yml` file below.
 
 Write a short summary of what you configured.
 
-[Write your summary here.]
+I provisioned an Ubuntu x86_64 VM in AWS and verified outbound HTTPS connectivity to Azure DevOps. In Azure DevOps, I created a Personal Access Token and a self-hosted agent pool named SelfHostedPool. On the VM, I downloaded and configured the Linux Azure Pipelines agent, registered it to the pool using the PAT, and installed it as a systemd service with svc.sh so it runs automatically and survives reboots. After confirming the agent showed as Online in the pool, I created a YAML pipeline targeting the pool and ran it successfully. The output showed the VM's hostname, system info, the running user, disk usage, and the working directory, which confirmed the job executed on my own VM.
 
 ---
 
@@ -191,9 +213,9 @@ Add a screenshot of your LinkedIn post showing:
 * Three to five lines explaining your experience
 * A screenshot of the successful pipeline run with no secrets visible
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-07.png)
 
-**LinkedIn Post URL:** [Paste your LinkedIn post URL here]
+**LinkedIn Post URL:** https://www.linkedin.com/posts/emmanuel-sunday-210a08323_azuredevops-devops-cicd-share-7508484556426145793-IeBN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
