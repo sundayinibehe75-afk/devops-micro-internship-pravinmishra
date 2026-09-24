@@ -37,7 +37,7 @@ Add a screenshot of Azure Repos showing:
 * `main` branch
 * Project files
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-01-screenshot-01.png)
 
 ---
 
@@ -81,7 +81,13 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Publish stage
 * Deploy stage
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02a.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02b.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02c.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02d.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02e.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02f.png)
+![alt text](screenshots/Assignment-03-Task-04-screenshot-02g.png)
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
 
@@ -104,7 +110,7 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Publish
 * Deploy
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-05-screenshot-03.png)
 
 ---
 
@@ -122,7 +128,7 @@ Add a screenshot of the pipeline SSH verification log or VM terminal showing the
 
 `/var/www/html`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-06-screenshot-04.png)
 
 ---
 
@@ -143,15 +149,15 @@ Add a browser screenshot showing:
 * Your Full Name
 * Deployment date
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-07-screenshot-05.png)
 
 ## Final Application URL
 
-`http://<vm-public-ip>`
+`http://13.220.141.121/`
 
 Replace the placeholder and paste your final application URL below:
 
-[Paste your final application URL here.]
+`http://13.220.141.121/`
 
 ---
 
@@ -159,7 +165,7 @@ Replace the placeholder and paste your final application URL below:
 
 Write a short explanation of the CI/CD workflow you created.
 
-[Write your summary here.]
+I created a multi-stage CI/CD pipeline in Azure DevOps that automatically builds, tests, publishes, and deploys a React application whenever a change is committed to main. I provisioned an Ubuntu VM on AWS with Terraform, and used Ansible to configure Nginx with React SPA routing, SSH access, and deployment permissions. The pipeline runs on my self-hosted agent: the Build stage installs dependencies and creates the production build, the Test stage runs the application's tests, the Publish stage saves the build output as a pipeline artifact, and the Deploy stage copies that artifact to /var/www/html on the VM through an SSH service connection. During setup, the agent went offline mid-run because the VM ran out of memory during npm ci. I diagnosed it with the kernel logs, added swap space, and expanded the disk from 8 GB to 20 GB, after which the full pipeline ran successfully end to end.
 
 ---
 
@@ -174,11 +180,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-03-Task-07-screenshot-06.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_azuredevops-cicd-react-ugcPost-7508930389046964224-ZnVw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 > Do not expose VM passwords, tokens, private keys, cloud credentials, or other sensitive information.
 
