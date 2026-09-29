@@ -70,7 +70,8 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_private_ip`
 * `mysql_fqdn`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-04-screenshot-01a.png)
+![alt text](screenshots/Assignment-04-Task-04-screenshot-01b.png)
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
 
@@ -86,7 +87,8 @@ Add a screenshot of the Azure Portal Resource Group overview showing:
 * Azure Database for MySQL Flexible Server
 * Related EpicBook resources
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-04-screenshot-02a.png)
+![alt text](screenshots/Assignment-04-Task-04-screenshot-02b.png)
 
 > Hide sensitive IDs, credentials, and database details.
 
@@ -124,7 +126,7 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-03.png)
 
 ---
 
@@ -137,7 +139,7 @@ Add a screenshot of the Application Pipeline log showing:
 * Zero failed hosts
 * Zero unreachable hosts
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-04.png)
 
 > Do not expose the SSH private key, MySQL password, Client Secret, or complete database connection string.
 
@@ -162,7 +164,8 @@ Add a browser screenshot showing:
 
 The screenshot may show a product, cart, or successful order view.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-05a.png)
+![alt text](screenshots/Assignment-04-Task-07-screenshot-05b.png)
 
 > Do not expose credentials or sensitive information.
 
@@ -172,15 +175,15 @@ Add your screenshot here.
 
 ## Frontend Application URL
 
-[Paste your final EpicBook application URL here.]
+http://20.235.146.232
 
 ## Infrastructure Repository URL
 
-[Paste your Infrastructure Repository URL here.]
+https://github.com/sundayinibehe75-afk/infra-epicbook
 
 ## Application Repository URL
 
-[Paste your Application Repository URL here.]
+https://github.com/sundayinibehe75-afk/theepicbook
 
 ---
 
@@ -188,7 +191,11 @@ Add your screenshot here.
 
 Write a short explanation of why separate Infrastructure and Application Repositories were used.
 
-[Write your explanation here.]
+1. Different pipelines and triggers: changing the app (like fixing ansible_user) only ran the app pipeline. Terraform never re-ran and never risked touching your VMs or database.
+
+2. Different credentials: the infra pipeline holds the Azure service principal, while the app pipeline only needs the SSH key and database login. Each one has only the access it needs.
+
+3. Smaller blast radius: a mistake in app code can't delete infrastructure, and an infra change doesn't redeploy the app.
 
 ---
 
@@ -201,7 +208,7 @@ Write a short explanation of how the following non-sensitive Terraform outputs w
 * `backend_private_ip`
 * `mysql_fqdn`
 
-[Write your explanation here.]
+After the Infrastructure Pipeline completed, I copied the four non-sensitive Terraform outputs from the pipeline's output log into the Application Repository. app_public_ip and backend_ansible_host went into ansible/inventory/hosts.ini as the SSH targets for the frontend and backend servers. backend_private_ip and mysql_fqdn went into ansible/group_vars/all.yml: Nginx uses the backend's private IP to proxy requests over the VNet, and the backend uses the MySQL FQDN to reach Azure Database for MySQL through private DNS. Secrets such as the database password and SSH private key were never part of this handoff. They come from an Azure DevOps variable group and Secure File at runtime.
 
 ---
 
@@ -216,11 +223,11 @@ Add a screenshot of your LinkedIn post showing:
 * Post text
 * At least one image or link
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-04-Task-07-screenshot-06.png)
 
 ## LinkedIn Post URL
 
-[Paste your public LinkedIn post URL here.]
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_azuredevops-terraform-ansible-ugcPost-7510776747156664321-bRAU/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 Your post must include:
 
