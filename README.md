@@ -97,8 +97,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 09 → Ansible 
  [![Week 09 – Ansible](./badges/week-09.svg)](./week-09-ansible/) 
 
-<!-- Week 10 → Azure DevOps CI/CD -->
-<!-- [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) -->
+ Week 10 → Azure DevOps CI/CD 
+ [![Week 10 – CI/CD](./badges/week-10.svg)](./week-10-azure-devops/) 
 
 <!-- Week 11 → Docker -->
 <!-- [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) -->
@@ -141,7 +141,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 08 | Azure Cloud | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-azure-devops-activity-7498018552239808513-Ax0K?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/completed-my-azure-three-tier-production-capstone-for-dmi-the-book-review-app-next-js-a1874554b45c |
 | 09 | Terraform | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-ugcPost-7502686250517164034-B4x9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/deployed-epicbook-on-aws-using-terraform-this-time-built-entirely-as-reusable-modules-instead-of-c5485be7f745 |
 | 10 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-ugcPost-7506056770126082048-bgza/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/terraform-provisions-it-ansible-configures-it-finally-built-the-full-pairing-end-to-end-this-a724a3fed899 |
-| 11 | Azure DevOps (CI/CD) | ⬜ Not Started | ⏳ Pending | — | — |
+| 11 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_azuredevops-agenticai-claudecode-ugcPost-7511188229249818624-w7o2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/in-my-last-post-i-shared-how-i-split-epicbook-into-two-repositories-and-two-azure-devops-923a38973400 |
 | 12 | Docker | ⬜ Not Started | ⏳ Pending | — | — |
 | 13 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
 | 14 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
