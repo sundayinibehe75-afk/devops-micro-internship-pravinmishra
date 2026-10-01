@@ -4,34 +4,15 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
-## Purpose (Read This First)
+## Task 1 — A Belief You Hold
 
-This week is not motivation homework.
+### Question
 
-This is you building your **Mindset OS** — the system you will use for the next 5 months (and honestly, for years).
+What is something you believe to be true that most people around you would disagree with?
 
-### Expectations
+Write at least **50 words**. Be honest, specific, and use clear professional sentences.
 
-* Be honest.
-* Be specific.
-* Be practical.
-* Write like an adult professional: clear sentences, no one-liners.
-
-You will reuse this in later weeks. So do it properly once.
-
----
-
-# Assignment 1. What is something you believe to be true that most people around you would disagree with?
-
-### Rules
-
-* No "safe" answers.
-* Must be your real belief (not copied from internet).
-* Minimum 50 words.
-
-**Hint:** What do you believe about career, money, learning, discipline, relationships, health, success, life, tech industry, etc. that most people don't agree with?
-
-## Answer
+### Your Answer
 
 Most people believe AI will completely replace developers — handling all coding and debugging without human input. I strongly disagree.
 I believe AI and developers will work together as a team, not against each other. As someone coming from a Cloud and DevOps background who leverages AI daily, I have seen firsthand that not every line of code AI generates is correct. A developer still needs to review, validate and make decisions about AI generated code before deploying anything to production.
@@ -40,48 +21,117 @@ AI is a powerful tool. But tools still need skilled hands to use them well.
 
 ---
 
-# Assignment 2. What are the top 3 objective truths you discovered through experimentation and results?
+## Task 2 — Three Objective Truths Discovered Through Experimentation
 
-### Definition
+Write three objective truths you discovered through your own actions and results. For each truth, include one sentence for the truth and two to four lines of evidence from your life.
 
-Objective truths do not depend on opinions. They hold true regardless of how people feel.
+### Truth #1
 
-Write each truth in this format:
-
-**Truth:** (1 sentence)
-
-**Evidence from my life:** (2–4 lines: what you tried + what happened)
-
----
-
-## Truth #1
-
-### Truth
+**Truth**
 
 Teaching others what you already know deepens your own understanding far beyond what studying alone ever could.
 
-### Evidence from my life
+**Evidence from My Life**
+
+Add your answer here...
+
+### Truth #2
+
+**Truth**
+
+Add your answer here...
+
+**Evidence from My Life**
+
+Add your answer here...
+
+### Truth #3
+
+**Truth**
+
+Add your answer here...
+
+**Evidence from My Life**
 
  When I started teaching German on Preply I felt nervous and unsure despite already knowing the language. The first month was difficult. But showing up consistently, explaining concepts differently to different students, and helping them pass exams and speak confidently made me realise I understood German far deeper than I thought. Teaching forced me to fill gaps I never knew existed.
 
 ---
 
-## Truth #2
+## Task 3 — What Does Your 2.0 Version Look Like?
 
-### Truth
+Write and publicly publish an article about your future professional self, written as if a journalist is writing about you **3–7 years from now**.
+
+Your article must:
+
+* Be at least **300 words**.
+* Be written in the **past tense**, as if it has already happened.
+* Include specific proof such as projects, portfolio, GitHub, blogs, certifications, job role, leadership, or community contribution.
+* Be published on LinkedIn, Medium, WordPress, Blogspot, a personal blog, or a portfolio page.
+
+### My Article
+
+Paste your complete article here...
+
+### Public Article URL
+
+```text
+Paste your published article URL here...
+```
+
+### LinkedIn Post URL
+
+Create a LinkedIn post sharing your published article, then add the URL below.
+
+```text
+Paste your LinkedIn post URL here...
+```
+
+### Credit Note — DMI Self-Paced Engineer Track Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
+
+> **P.S. This post is part of the DevOps Micro Internship (DMI) — Self-Paced Engineer Track — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public:** https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html **· Start your DevOps journey:** https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=self-paced
+
+`#DMIByPravinMishra`
+
+Tag [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) in your LinkedIn post.
+
+### Credit Note — DMI Campus Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
+
+> **P.S. This post is part of the DevOps Micro Internship (DMI) — Campus — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public:** https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html **· Start your DevOps journey:** https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=campus
+
+`#DMIByPravinMishra`
+
+Tag [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) and Lead Co-Mentor [Anjana Muthunayake](https://www.linkedin.com/in/anjana-muthunayake/) in your LinkedIn post.
+
+---
+
+## Task 4 — Reflection on Cutting Corners
+
+### Question
+
+Have you ever cut corners through unethical, dishonest, or shortcut behaviour (not necessarily illegal)? If yes, how did it make you feel?
+
+You do not need to tell the full story. Focus on the emotions you experienced. If your answer is yes, write **50–100 words**.
+
+### Your Answer
+
+**Yes / No:**
 
 Consistent effort toward a goal almost always delivers more than the goal itself.
 
 
-### Evidence from my life
+**Reflection:**
 
 I prepared for the KCNA and AWS Cloud Practitioner exam through long study sessions and late nights. The goal was simply to pass. But when I finally did, I realised the real reward wasn't the certificate — it was the AWS knowledge I had built, the gaps I had filled and the confidence I had gained. The exam was just the destination. The journey was the real prize.
 
 ---
 
-## Truth #3
+## Task 5 — Your One-Year Non-Fiction Reading Plan
 
-### Truth
+List **10 non-fiction books** you plan to read during the next year. Include the title and author of each book. Books in any language are allowed.
 
 You never truly understand technology until you deploy something real with it.
 
@@ -91,11 +141,11 @@ I had been building and deploying projects during my Cloud and DevOps training �
 
 ---
 
-# Assignment 3. What does your 2.0 version look like?
+## Task 6 — Your Life and Career Metrics
 
-### Instructions
+List the things you will measure regularly in your life and career. You only need to list the metric topics; do not include personal numbers.
 
-Write as if a journalist is writing about you **3 to 7 years from now** (not 20 years).
+Your list must include learning or skills, output or proof, health or energy, time or focus, and money or finance.
 
 **Minimum 300 words.**
 
@@ -288,21 +338,17 @@ List topics only. No need to share numbers.
 
 ---
 
-# Assignment 7. Brain Dump + 5-Month System Plan
+## Task 7 — Brain Dump and Three-Month System Plan
 
-## Step 1: Brain Dump (Private)
+### Step 1 — Brain Dump (Private)
 
-Do a brain dump of everything in your mind into a notebook.
+Do a private brain dump in a notebook, notes app, or document. Include everything currently on your mind, such as tasks, bills, worries, goals, pending messages, ideas, and responsibilities.
 
-Examples:
+**Did you create a brain dump?**
 
-* Bills
-* Tasks
-* Worries
-* Goals
-* Pending messages
-* Ideas
-* Responsibilities
+```text
+Yes / No
+```
 
 ### Did You Do It?
 
@@ -332,28 +378,14 @@ Example:
 -Saturday: Attend DMI sessions, complete assignments, and review notes
 -Sunday: Weekly review, plan the upcoming week, and organize tasks
 
----
-
-### Focus Blocks
-
-#### When Will You Do DMI Work? (Days + Time)
+#### When Will I Complete My DMI Work? (Include Days and Time)
 
 -Monday–Friday: 7:00 PM – 9:00 PM
 -Saturday: 10:00 AM – 1:00 PM
 
-#### How Many Sessions Per Week?
+#### How Many DMI Work Sessions Will I Complete Each Week?
 
 -6 focused study sessions per week
-
----
-
-### Distraction Rules
-
-Examples:
-
-* Phone rules
-* Social media rules
-* Environment setup
 
 #### My Distraction Rules
 
@@ -364,34 +396,35 @@ Examples:
 -Take a 10-minute break after every 60–90 minutes of focused work.
 -Write down distracting thoughts instead of acting on them immediately.
 
-# Reflection – Week 1
+## Task 8 — Week 1 Reflection and Proof of Work
 
-### Biggest insight I got about myself this week
+### Biggest Insight I Got About Myself This Week
 
 The brain dump exercise made me realize how much mental energy I spend trying to remember everything. Writing things down made me feel more organized and helped me think more clearly.
 
-### My biggest weakness/loop I noticed
+### My Biggest Weakness or Loop I Noticed
 
 I sometimes rely too much on memory instead of using a system to keep track of my responsibilities and goals.
 
-### One system I will implement from this week (exact habit + time)
+### One System I Will Implement From This Week (Exact Habit and Time)
 
 Every night at 9:00 PM, I will spend 10 minutes writing down unfinished tasks and planning the next day before going to bed.
 
-### LinkedIn Post
+### Proof of Work
 
-Paste your LinkedIn post link here:
+**LinkedIn Post URL**
 
 https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-micro-internship-activity-7478878036629733377-RKAY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
-## 10. Proof of Work
+## Completion Checklist
 
 - https://www.linkedin.com/posts/emmanuel-sunday-210a08323_join-the-dmi-devops-micro-internship-activity-7478878036629733377-RKAY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ  
 - Blog / Medium : https://medium.com/@sundayinibehe75/week-1-of-the-dmi-micro-internship-success-mindset-this-week-wasnt-about-technical-skills-it-82a59b93b4af  
 
 ---
+
 
 ## 📌 About DMI & CloudAdvisory
 
