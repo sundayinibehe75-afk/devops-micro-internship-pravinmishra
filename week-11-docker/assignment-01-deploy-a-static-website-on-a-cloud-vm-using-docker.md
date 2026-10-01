@@ -28,7 +28,8 @@ Add a screenshot of the cloud console showing:
 - SSH port 22 enabled from your IP address
 - HTTP port 80 enabled from Anywhere
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-01-screenshot-1a.png)
+![alt text](screenshots/Assignment-01-Task-01-screenshot-1b.png)
 
 ---
 
@@ -50,7 +51,7 @@ cat /var/log/cloud-init-output.log
 
 The visible output must show Docker installation activity.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-02-screenshot-02.png)
 
 ---
 
@@ -76,7 +77,7 @@ and
 docker ps
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-03-screenshot-03.png)
 
 ---
 
@@ -92,7 +93,7 @@ Download the static website source code.
 
 Add a screenshot of the terminal showing the contents of the `Azure-Static-Website` project directory after cloning the repository.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-04-screenshot-04.png)
 
 ---
 
@@ -114,7 +115,7 @@ cat Dockerfile
 
 The Dockerfile must use `nginx:alpine`, copy the website files to the Nginx web root, and expose port 80.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-05-screenshot-05.png)
 
 ---
 
@@ -136,7 +137,7 @@ docker images
 
 The output must include the `static-site` image with the `latest` tag.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-06-screenshot-06.png)
 
 ---
 
@@ -162,7 +163,7 @@ The output must show the running `static-site` container with the port mapping:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-07-screenshot-07.png)
 
 ---
 
@@ -182,7 +183,7 @@ Add a screenshot of the terminal showing the output of:
 curl ifconfig.me
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-08-screenshot-08.png)
 
 ---
 
@@ -192,13 +193,13 @@ Add a screenshot of the browser showing the deployed static website.
 
 Ensure that the VM public IP address is visible in the browser address bar.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-01-Task-08-screenshot-09.png)
 
 ---
 
 # Public Application URL
 
-**VM Public IP / Application URL:** `Add your application URL here`
+**VM Public IP / Application URL:** http://20.219.85.115
 
 ---
 
@@ -210,11 +211,11 @@ Create a LinkedIn post describing what you deployed, the deployment process, and
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn Post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/emmanuel-sunday-210a08323_docker-devops-containers-share-7511510357237084160-L4O9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![alt text](screenshots/Assignment-01-Task-08-screenshot-10.png)
 
 ---
 
