@@ -26,7 +26,7 @@ Add a screenshot of Docker Hub showing your newly created public repository:
 my-react-app
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-01.png)
 
 ---
 
@@ -40,7 +40,7 @@ Login Succeeded
 
 Ensure that your full name is visible and that no password, Personal Access Token, or device code is exposed.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-02.png)
 
 ---
 
@@ -54,7 +54,7 @@ docker image ls <YOUR_DOCKERHUB_USERNAME>/my-react-app
 
 The output must show the `latest` tag.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-03.png)
 
 ---
 
@@ -68,7 +68,7 @@ docker push <YOUR_DOCKERHUB_USERNAME>/my-react-app:latest
 
 The output must include a pushed status or image digest.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-04.png)
 
 ---
 
@@ -76,7 +76,7 @@ Add your screenshot here.
 
 Add a screenshot of your Docker Hub repository showing the uploaded `latest` image tag.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-05.png)
 
 ---
 
@@ -88,7 +88,7 @@ Add a screenshot of the terminal showing:
 - Successful `docker pull` output
 - `docker image ls` showing the pulled image
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-06.png)
 
 ---
 
@@ -106,7 +106,7 @@ The output must show the running `react-container` with:
 0.0.0.0:80->80/tcp
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-07.png)
 
 ---
 
@@ -115,18 +115,18 @@ Add your screenshot here.
 Add a browser screenshot showing the React application at:
 
 ```text
-http://<YOUR-VM-PUBLIC-IP>
+http://20.219.85.115
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-08.png)
 
 ---
 
 # Docker Hub Repository URL
 
-**Repository URL:** `Add your Docker Hub repository URL here`
+**Repository URL:** https://hub.docker.com/r/inibehe/my-react-app
 
 ---
 
@@ -138,7 +138,11 @@ Write a short explanation covering:
 - Why a container registry is useful in DevOps workflows
 - Why production deployments should use versioned image tags instead of relying only on `latest`
 
-Write your explanation here.
+Docker where to push it. The full name follows the pattern <registry>/<username>/<repository>:<tag>, and for Docker Hub the registry part is left out. A locally built image named something like my-react-app has no username, so Docker doesn't know which account or repository it belongs to. Tagging it as <username>/my-react-app:latest links the image to my Docker Hub repository, and the tag (latest) labels which version is being published. Without the correct tag, the push is rejected or sent to the wrong place.
+
+Why a container registry is useful in DevOps workflows: A registry is a central place to store and share images. A CI/CD pipeline can build an image once, push it to the registry, and every environment (dev, staging, production) or teammate can pull the exact same image. This assignment showed that: after deleting the local image, I pulled it back from Docker Hub and ran it with the same result, so the deployment no longer depended on the machine where it was built. Registries also keep a history of image versions, which makes rollbacks possible, and they integrate with orchestration platforms like Kubernetes, which pull images from a registry to run containers.
+
+tag name. It doesn't mean "newest stable" and changes every time someone pushes without a specific tag. If production relies on latest, two servers can end up running different versions, a restart can quietly pull an untested image, and it's hard to know what's actually deployed or roll back to a known-good version. Versioned tags like v1.0.0 or a Git commit SHA are fixed, traceable, and repeatable. I ran into this risk myself in an earlier assignment: a MongoDB image tagged latest pulled a new major version that failed to start on my VM, and pinning it to mongo:7.0 fixed it.
 
 ---
 
@@ -162,13 +166,13 @@ Include:
 
 Paste your LinkedIn post URL here:
 
-`Add your URL here`
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_docker-dockerhub-devops-ugcPost-7512118012913532928-8S1M/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post here.
+![alt text](screenshots/Assignment-05-Task-01-screenshot-09.png)
 
 ---
 
