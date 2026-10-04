@@ -30,7 +30,7 @@ backend/
 docker-compose.yml
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-01-screenshot-01.png)
 
 ---
 
@@ -47,7 +47,7 @@ backend/.dockerignore
 
 Ensure that no real passwords, tokens, or secrets are visible.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-01-screenshot-02.png)
 
 ---
 
@@ -63,7 +63,7 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-02-screenshot-03.png)
 
 ---
 
@@ -71,7 +71,7 @@ Add your screenshot here.
 
 Add a screenshot showing the completed `backend/Dockerfile`.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-02-screenshot-04.png)
 
 ---
 
@@ -83,7 +83,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker compose build
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-02-screenshot-05.png)
 
 ---
 
@@ -105,7 +105,7 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - `mysql_data` volume mount
 - No published MySQL port
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-03-screenshot-06.png)
 
 ---
 
@@ -118,7 +118,7 @@ Add a screenshot showing the backend service configuration, including:
 - Browser frontend origin configured for CORS
 - Published backend port
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-03-screenshot-07.png)
 
 ---
 
@@ -130,7 +130,7 @@ Add a screenshot showing the frontend service configuration, including:
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-03-screenshot-08.png)
 
 ---
 
@@ -138,7 +138,7 @@ Add your screenshot here.
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-03-screenshot-09.png)
 
 ---
 
@@ -160,7 +160,7 @@ docker compose ps
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-10.png)
 
 ---
 
@@ -174,7 +174,7 @@ docker compose logs mysql backend --tail=50
 
 The logs must show MySQL readiness and successful backend database connection.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-04-screenshot-11.png)
 
 ---
 
@@ -192,7 +192,7 @@ Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-12.png)
 
 ---
 
@@ -202,7 +202,7 @@ Add a browser screenshot showing a created book review visible in the applicatio
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-13.png)
 
 ---
 
@@ -213,7 +213,8 @@ Add a browser developer-tools screenshot with:
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-05-screenshot-14a.png)
+![alt text](screenshots/Assignment-06-Task-05-screenshot-14b.png)
 
 ---
 
@@ -231,7 +232,7 @@ Add a browser screenshot showing the registered user or created review before th
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-06-screenshot-15.png)
 
 ---
 
@@ -247,7 +248,7 @@ docker compose ps
 
 Do not use `docker compose down -v`.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-06-screenshot-16.png)
 
 ---
 
@@ -257,7 +258,7 @@ Add a browser screenshot showing the same registered user or review after the st
 
 Add your full name as a clear caption directly below the screenshot.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-06-Task-06-screenshot-17.png)
 
 ---
 
@@ -277,13 +278,13 @@ Write a short explanation of 5–8 lines covering:
 - When a full reset is useful
 - Why a full reset must not be used before persistence evidence is captured
 
-Write your explanation here.
+docker compose down stops and removes the stack's containers and the default network, but it keeps named volumes such as mysql_data, as well as the built images. Because MySQL stores its data files in the mysql_data volume, keeping that volume means users, books and reviews are still there when the stack comes back with docker compose up -d, which is what Task 6 proved. docker compose down -v also deletes the named volumes, so the MySQL data is permanently lost, and the next start creates an empty database initialized from the MYSQL_* variables. A full reset is useful in development or testing, for example to start from a clean database, apply changed MySQL credentials (they're only read when the volume is first created), or recover from a broken local setup. It must not be used before the persistence evidence is captured, because deleting the volume would wipe the very data the before-and-after screenshots need to show surviving the restart.
 
 ---
 
 # Final Public Frontend URL
 
-**Frontend URL:** `http://<VM_PUBLIC_IP>:<FRONTEND_PORT>`
+**Frontend URL:** http://20.219.85.115:3000/book/1
 
 Replace the placeholder with your working application URL.
 
@@ -291,7 +292,7 @@ Replace the placeholder with your working application URL.
 
 # GitHub Repository URL
 
-**Your Fork or Repository URL:** `Add your GitHub repository URL here`
+**Your Fork or Repository URL:** https://github.com/sundayinibehe75-afk/book-review-app
 
 ---
 
@@ -303,11 +304,11 @@ Create a LinkedIn post about the Book Review App deployment and what you learned
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/emmanuel-sunday-210a08323_docker-dockercompose-devops-ugcPost-7512580991035559936-Cl33/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of your published LinkedIn post here.
+![alt text](screenshots/Assignment-06-Task-07-screenshot-18.png)
 
 ---
 
