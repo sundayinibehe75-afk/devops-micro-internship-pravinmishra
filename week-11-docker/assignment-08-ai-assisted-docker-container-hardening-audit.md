@@ -12,7 +12,7 @@ In this assignment, you will build a read-only Bash script that audits a running
 
 # Target Container
 
-**Target Container Name:** `Add the exact container name here`
+**Target Container Name:** theepicbook-backend-1
 
 ---
 
@@ -33,7 +33,7 @@ docker-audit.sh
 SKILL.md
 ```
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-01-screenshot-01.png)
 
 ---
 
@@ -49,7 +49,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-02-screenshot-02.png)
 
 ---
 
@@ -70,7 +70,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The usage message displayed when the script runs without a container name
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-03-screenshot-03.png)
 
 ---
 
@@ -90,7 +90,7 @@ Add a terminal screenshot showing:
 - `docker ps`
 - The audit command using the selected target container name
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-04-screenshot-04.png)
 
 ---
 
@@ -98,7 +98,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing the initial Docker audit results.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-04-screenshot-05.png)
 
 ---
 
@@ -119,7 +119,8 @@ Add a Claude Code screenshot showing:
 - Recommended manual fix
 - Verification method
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-05-screenshot-06a.png)
+![alt text](screenshots/Assignment-08-Task-05-screenshot-06b.png)
 
 ---
 
@@ -135,7 +136,7 @@ Manually fix one WARN or FAIL finding from the initial audit.
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-06-screenshot-07.png)
 
 ---
 
@@ -143,7 +144,7 @@ Add your screenshot here.
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-06-screenshot-08.png)
 
 ---
 
@@ -163,7 +164,7 @@ Add a terminal screenshot showing:
 - The updated running container
 - The final audit report
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-07-screenshot-09.png)
 
 ---
 
@@ -176,7 +177,13 @@ Write a short comparison covering:
 - Final audit result
 - Security benefit of the improvement
 
-Write your comparison here.
+Initial audit finding: The backend container was running as root. The Dockerfile had been deliberately modified to drop the non-root user directive, and the audit correctly flagged this as a WARN — a container running as root has full privileges inside its own namespace, which widens the blast radius if the application is ever compromised.
+
+Dockerfile change applied: Restored the USER node instruction in the Dockerfile, so the container process runs as the existing non-root node user instead of root. Rebuilt the image and recreated the theepicbook-backend-1 service with the updated configuration.
+
+Final audit result: Re-running the audit against the rebuilt container showed the root-user finding cleared — the container now reports running as a non-root user, with no change in any other check’s status.
+
+Security benefit: Running as a non-root user limits what an attacker can do if the application itself is ever exploited. A process running as root inside the container can, in many misconfigurations, escalate to actions on the host or escape the container boundary more easily; a non-root user confines any compromise to the permissions of that unprivileged account, which is a meaningfully smaller attack surface for a production-facing service like EpicBook’s backend.
 
 ---
 
@@ -188,13 +195,13 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-docker-devops-ugcPost-7513925745686278145-PVVX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 #### LinkedIn Post Screenshot
 
 Add a screenshot of the published LinkedIn post, including the final audit result.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-08-Task-07-screenshot-10.png)
 
 ---
 
