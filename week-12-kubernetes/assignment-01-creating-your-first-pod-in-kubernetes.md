@@ -74,7 +74,7 @@ Define the NGINX Pod in a YAML file, apply the manifest, and verify the resultin
 
 **1. What is the difference between imperative and declarative Pod creation?**
 
-Add your answer here.
+Imperative Pod creation uses direct CLI commands (like kubectl run) to tell Kubernetes what immediate action to take, making it ideal for quick testing. Declarative creation uses YAML files (with kubectl apply) to define the desired end-state of the resource. Kubernetes then automatically bridges the gap to match that state, which is the best practice for production and GitOps tracking.
 
 ---
 
