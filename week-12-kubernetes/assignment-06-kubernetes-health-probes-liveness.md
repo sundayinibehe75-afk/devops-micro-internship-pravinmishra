@@ -236,7 +236,7 @@ Share what you learned about Kubernetes liveness probes, container restarts, and
 
 #### Linkedin post URL
 
-Add URl here
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_kubernetes-devops-livenessprobe-ugcPost-7516080106826539008-i_8-/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
