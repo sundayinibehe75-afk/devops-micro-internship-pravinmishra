@@ -12,19 +12,19 @@ Deploy the Book Review App as a production-style three-tier application using Ku
 
 ## Submission Details
 
-**Full Name:** Add your full name here.
+**Full Name:** Inibehe Emmanuel Sunday
 
-**Kubernetes Platform:** Add your platform here.
+**Kubernetes Platform:** Azure Kubernetes service in Microsoft Azure 
 
 **Namespace:** book-review
 
-**Frontend URL or IP:** Add the working endpoint here.
+**Frontend URL or IP:** http://20.235.33.65
 
-**Access Method:** Public LoadBalancer, Ingress, or documented local access.
+**Access Method:** Public LoadBalancer
 
-**GitHub Manifests or Helm Chart URL:** Add your repository link here.
+**GitHub Manifests or Helm Chart URL:** https://github.com/sundayinibehe75-afk/book-review-app-aks
 
-**Architecture Diagram:** Add your diagram or link here.
+**Architecture Diagram:** ![alt text](screenshots/Assignment-10-Task-02-screenshot-03.png)
 
 ---
 
@@ -38,7 +38,7 @@ Prepare the cluster, application source, container images, and tooling needed fo
 
 #### Screenshot 1 — Active Kubernetes context and Ready nodes
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-01-screenshot-01.png)
 
 ---
 
@@ -46,7 +46,7 @@ Add your screenshot here.
 
 Required only if you choose Helm. Skip this screenshot if using YAML manifests.
 
-Add your screenshot here, or write “Not applicable — using YAML manifests.”
+Not applicable — using YAML manifests.
 
 ---
 
@@ -60,7 +60,7 @@ Document the workloads, networking, configuration, storage, and permitted commun
 
 #### Screenshot 3 — Completed Kubernetes architecture diagram
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-02-screenshot-03.png)
 
 ---
 
@@ -74,13 +74,13 @@ Provide application configuration and credentials without embedding sensitive va
 
 #### Screenshot 4 — ConfigMap configuration or describe output showing non-sensitive values
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-03-screenshot-04.png)
 
 ---
 
 #### Screenshot 5 — Secret references or describe output showing names and keys without sensitive values
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-03-screenshot-05.png)
 
 ---
 
@@ -94,13 +94,13 @@ Provide persistent MySQL storage and allow the backend to connect without exposi
 
 #### Screenshot 6 — Managed MySQL status or MySQL StatefulSet and PVC status
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-04-screenshot-06.png)
 
 ---
 
 #### Screenshot 7 — Successful database connectivity or schema verification with credentials hidden
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-04-screenshot-07.png)
 
 ---
 
@@ -114,7 +114,7 @@ Run one or two Node.js/Express backend replicas on port 3001 and expose them thr
 
 #### Screenshot 8 — Backend Deployment, ready Pods, and internal Service
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-05-screenshot-08.png)
 
 ---
 
@@ -122,7 +122,7 @@ Add your screenshot here.
 
 If the application does not log successful database connections, provide a successful database-backed request alongside the startup logs.
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-05-screenshot-09.png)
 
 ---
 
@@ -136,13 +136,13 @@ Run the Next.js frontend behind Nginx on port 80 and proxy API requests to the i
 
 #### Screenshot 10 — Frontend Deployment and Ready Pods
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-06-screenshot-10.png)
 
 ---
 
 #### Screenshot 11 — Nginx reverse-proxy configuration showing the internal backend Service name and port 3001
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-06-screenshot-11.png)
 
 ---
 
@@ -156,13 +156,13 @@ Expose the frontend and enforce the intended communication path between applicat
 
 #### Screenshot 12 — Frontend LoadBalancer or Ingress configuration and assigned endpoint, or documented local access method
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-07-screenshot-12.png)
 
 ---
 
 #### Screenshot 13 — Internal backend Service and NetworkPolicy or equivalent restriction, with access-test evidence
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-07-screenshot-13.png)
 
 ---
 
@@ -176,31 +176,31 @@ Prove that the frontend, backend, and MySQL database work together and collect o
 
 #### Screenshot 14 — `kubectl get all` output for the book-review namespace
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-08-screenshot-14.png)
 
 ---
 
 #### Screenshot 15 — Functional Book Review App in the browser with the URL visible, including evidence of a successful user flow
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-08-screenshot-15.png)
 
 ---
 
 #### Screenshot 16 — Frontend or Nginx container logs
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-08-screenshot-16.png)
 
 ---
 
 #### Screenshot 17 — Backend logs and evidence of a successful database-backed operation
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-08-screenshot-17.png)
 
 ---
 
 #### Screenshot 18 — Optional: Kubernetes dashboard
 
-Add your screenshot here, or write “Not attempted.”
+![alt text](screenshots/Assignment-10-Task-08-screenshot-18.png)
 
 Multiple images may be included under a screenshot number when needed to demonstrate the complete user flow.
 
@@ -216,7 +216,7 @@ Add selected improvements without breaking the required three-tier architecture.
 
 #### Screenshot 19 — Optional: Evidence of selected Helm, HPA, probe, or TLS improvements
 
-Add your screenshot here, or write “Not attempted.”
+![alt text](screenshots/Assignment-10-Task-09-screenshot-19.png)
 
 ---
 
@@ -230,11 +230,11 @@ Explain your three-tier architecture, demonstrate the working application, and s
 
 #### Screenshot 20 — Published LinkedIn post about your Book Review App deployment on Kubernetes
 
-Add your screenshot here.
+![alt text](screenshots/Assignment-10-Task-10-screenshot-20.png)
 
 ### LinkedIn Post URL
 
-Add your published LinkedIn post URL here.
+https://www.linkedin.com/posts/emmanuel-sunday-210a08323_kubernetes-azure-aks-ugcPost-7519498055889588226-oE9H/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ
 
 ---
 
