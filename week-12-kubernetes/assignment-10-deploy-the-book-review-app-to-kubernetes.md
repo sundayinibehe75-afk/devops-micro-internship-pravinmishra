@@ -244,31 +244,69 @@ https://www.linkedin.com/posts/emmanuel-sunday-210a08323_kubernetes-azure-aks-ug
 
 Describe the application components and user flows you successfully deployed and tested.
 
-Add your summary here.
+The Book Review App capstone involved deploying a containerized application consisting of a Next.js frontend, a Node.js backend API, and a MySQL database. Docker was used to package the application components, while Kubernetes manifests were created to manage application deployment and networking.
+
+The Kubernetes configuration included Deployments, Services, a MySQL StatefulSet, persistent volume storage, ConfigMaps, and a Secret example. Additional manifests were prepared for NGINX, backend autoscaling, and network policies.
+
+The application components and Kubernetes configuration were developed and worked on during the assignment. Only the user flows and components that were successfully verified in the running environment should be considered fully tested.
 
 ## Issues and Fixes
 
 Describe the main issues encountered, their causes, and how you resolved them.
 
-Add your summary here.
+Several challenges were encountered during the assignment:
+
+Docker image builds: Building the backend image from the Node.js base image took a considerable amount of time. The build was allowed to complete before proceeding.
+
+Kubernetes configuration: Deployment, Service, and StatefulSet configurations required careful attention to labels, selectors, ports, and resource relationships.
+
+Persistent storage: The MySQL configuration required a PersistentVolumeClaim to support persistent database storage.
+
+Application configuration: Frontend and backend communication required the correct API URL and appropriate service configuration.
+
+Environment differences: Some instructions needed to be adapted to the Azure Kubernetes environment rather than followed exactly as AWS EKS commands.
+
+These challenges reinforced the importance of checking application configuration, image builds, Kubernetes resource status, logs, and service connectivity when troubleshooting deployments.
 
 ## Tools and Sources Used
 
 List the documentation and tools that helped you complete the assignment.
 
-Add your tools and sources here.
+Microsoft Azure / Azure Kubernetes Service (AKS): Kubernetes hosting and cluster management.
+
+Docker: Building container images for the frontend and backend.
+
+Kubernetes and kubectl: Managing and inspecting application resources.
+
+Git and GitHub: Version control and source-code documentation.
+
+Visual Studio Code: Editing application code, Dockerfiles, and Kubernetes manifests.
+
+Node.js and Next.js: Backend API and frontend application technologies.
+
+MySQL: Relational database.
+
+Official Docker documentation: https://docs.docker.com/
+
+Kubernetes documentation: https://kubernetes.io/docs/
+
+Microsoft Azure documentation: https://learn.microsoft.com/azure/
+
+GitHub repository: https://github.com/sundayinibehe75-afk/book-review-app-aks
 
 ## Optional Improvements
 
 Describe any optional improvements implemented, or write “Not attempted.”
 
-Add your summary here.
+Additional improvements included preparing manifests for backend horizontal pod autoscaling, network policies, and NGINX-based traffic routing. These configurations were included in the project repository; their operational behaviour should be confirmed through testing before describing them as fully implemented and verified.
+
+Further improvements could include comprehensive application testing, database backup and recovery, monitoring and alerting, secure secret management, and automated CI/CD deployment.
 
 ## Cleanup or Reuse Plan
 
 State which resources were removed or why the environment is being retained.
 
-Add your cleanup status or reuse plan here.
+The Azure Kubernetes environment is being retained to complete Assignment 11 — AI-Assisted Kubernetes Incident Triage. The existing Book Review App deployment will be reused to establish a healthy baseline, simulate a controlled failure, collect diagnostic evidence using a read-only Bash script, and analyze the results with Claude Code through the /k8s-triage skill. Recovery will be performed manually, followed by verification and documentation. The environment will be reviewed after the exercise to determine whether any resources can be safely removed and to manage ongoing cloud costs.
 
 ---
 
