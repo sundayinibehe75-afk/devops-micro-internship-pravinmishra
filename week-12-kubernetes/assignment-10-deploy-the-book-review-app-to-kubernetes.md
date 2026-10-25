@@ -244,29 +244,27 @@ https://www.linkedin.com/posts/emmanuel-sunday-210a08323_kubernetes-azure-aks-ug
 
 Describe the application components and user flows you successfully deployed and tested.
 
-The Book Review App capstone involved deploying a containerized application consisting of a Next.js frontend, a Node.js backend API, and a MySQL database. Docker was used to package the application components, while Kubernetes manifests were created to manage application deployment and networking.
+I deployed the Book Review App on Azure Kubernetes Service (AKS) in the book-review namespace as a three-tier application: a Next.js frontend, a Node.js/Express backend API on port 3001, and a MySQL database.
 
-The Kubernetes configuration included Deployments, Services, a MySQL StatefulSet, persistent volume storage, ConfigMaps, and a Secret example. Additional manifests were prepared for NGINX, backend autoscaling, and network policies.
+The deployment uses Deployments for the frontend, backend and Nginx; a MySQL StatefulSet with a PersistentVolumeClaim so data survives Pod restarts; ClusterIP Services for the frontend, backend and MySQL so they are only reachable inside the cluster; and a public LoadBalancer Service for Nginx at http://20.235.33.65.
 
-The application components and Kubernetes configuration were developed and worked on during the assignment. Only the user flows and components that were successfully verified in the running environment should be considered fully tested.
+Configuration is stored in a ConfigMap, and the database credentials and JWT secret are stored in a Secret (book-review-secret). Only a placeholder template (02-secret.example.yaml) is committed to Git; the real Secret file is excluded by .gitignore and was applied directly to the cluster.
+
+I tested the full user flow in the browser: the app loaded through Nginx, API requests reached the backend, and data was saved to and read from MySQL.
+
 
 ## Issues and Fixes
 
 Describe the main issues encountered, their causes, and how you resolved them.
 
-Several challenges were encountered during the assignment:
+Docker image builds: The backend image took a long time to build from the Node.js base image, so I waited for it to finish and pushed it to Docker Hub before deploying.
 
-Docker image builds: Building the backend image from the Node.js base image took a considerable amount of time. The build was allowed to complete before proceeding.
+Kubernetes configuration: Labels, selectors and ports had to match exactly between Deployments, StatefulSets and Services. I checked them with kubectl get and kubectl describe until all Pods were Ready and each Service had endpoints.
 
-Kubernetes configuration: Deployment, Service, and StatefulSet configurations required careful attention to labels, selectors, ports, and resource relationships.
+Frontend and backend communication: The frontend needed the correct API path. Nginx routes /api/ requests to the backend Service on port 3001 and all other requests to the frontend on port 3000.
 
-Persistent storage: The MySQL configuration required a PersistentVolumeClaim to support persistent database storage.
+Platform differences: Some instructions were written for AWS EKS, so I adapted them to Azure AKS.
 
-Application configuration: Frontend and backend communication required the correct API URL and appropriate service configuration.
-
-Environment differences: Some instructions needed to be adapted to the Azure Kubernetes environment rather than followed exactly as AWS EKS commands.
-
-These challenges reinforced the importance of checking application configuration, image builds, Kubernetes resource status, logs, and service connectivity when troubleshooting deployments.
 
 ## Tools and Sources Used
 
@@ -274,19 +272,15 @@ List the documentation and tools that helped you complete the assignment.
 
 Microsoft Azure / Azure Kubernetes Service (AKS): Kubernetes hosting and cluster management.
 
-Docker: Building container images for the frontend and backend.
+Docker and Docker Hub: Building and storing the frontend and backend images.
 
-Kubernetes and kubectl: Managing and inspecting application resources.
+Kubernetes and kubectl: Deploying and inspecting application resources.
 
-Git and GitHub: Version control and source-code documentation.
+Git and GitHub: Version control for the application and manifests.
 
-Visual Studio Code: Editing application code, Dockerfiles, and Kubernetes manifests.
+Visual Studio Code: Editing code, Dockerfiles and Kubernetes manifests.
 
-Node.js and Next.js: Backend API and frontend application technologies.
-
-MySQL: Relational database.
-
-Official Docker documentation: https://docs.docker.com/
+Docker documentation: https://docs.docker.com/
 
 Kubernetes documentation: https://kubernetes.io/docs/
 
@@ -298,15 +292,18 @@ GitHub repository: https://github.com/sundayinibehe75-afk/book-review-app-aks
 
 Describe any optional improvements implemented, or write “Not attempted.”
 
-Additional improvements included preparing manifests for backend horizontal pod autoscaling, network policies, and NGINX-based traffic routing. These configurations were included in the project repository; their operational behaviour should be confirmed through testing before describing them as fully implemented and verified.
+NetworkPolicy: I added a NetworkPolicy (backend-network-policy) that protects the backend. Only the nginx and frontend Pods can reach the backend, and only on TCP port 3001; all other traffic to the backend is blocked. Access-test evidence is shown in Screenshot 13.
 
-Further improvements could include comprehensive application testing, database backup and recovery, monitoring and alerting, secure secret management, and automated CI/CD deployment.
+Horizontal Pod Autoscaler: I added an HPA for the backend that scales between 1 and 3 replicas when average CPU use goes above 70% of its CPU request.
+
+Nginx reverse proxy: Nginx is the only public entry point and routes traffic to the frontend and backend.
+
 
 ## Cleanup or Reuse Plan
 
 State which resources were removed or why the environment is being retained.
 
-The Azure Kubernetes environment is being retained to complete Assignment 11 — AI-Assisted Kubernetes Incident Triage. The existing Book Review App deployment will be reused to establish a healthy baseline, simulate a controlled failure, collect diagnostic evidence using a read-only Bash script, and analyze the results with Claude Code through the /k8s-triage skill. Recovery will be performed manually, followed by verification and documentation. The environment will be reviewed after the exercise to determine whether any resources can be safely removed and to manage ongoing cloud costs.
+The AKS cluster and the Book Review App deployment are being kept for Assignment 11 (AI-Assisted Kubernetes Incident Triage). In that assignment I will use the healthy app as a baseline, cause a controlled failure, collect evidence with a read-only Bash script, analyse it with Claude Code using the /k8s-triage skill, fix it manually, and verify the recovery. After Assignment 11, I will delete resources I no longer need to control Azure costs.
 
 ---
 
