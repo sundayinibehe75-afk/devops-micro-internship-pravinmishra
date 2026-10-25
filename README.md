@@ -103,8 +103,8 @@ This is not a course. It is an internship-style program — real deployments, re
  Week 11 → Docker 
  [![Week 11 – Docker](./badges/week-11.svg)](./week-11-docker/) 
 
-<!-- Week 12 → Kubernetes -->
-<!-- [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) -->
+ Week 12 → Kubernetes 
+ [![Week 12 – K8s](./badges/week-12.svg)](./week-12-kubernetes/) 
 
 <!-- Week 13 → Final Project / Capstone -->
 <!-- [![Week 13 – Capstone](./badges/week-13.svg)](./week-13-final-project/) -->
@@ -143,7 +143,7 @@ This is not a course. It is an internship-style program — real deployments, re
 | 10 | Ansible | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-aws-terraform-ugcPost-7506056770126082048-bgza/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/terraform-provisions-it-ansible-configures-it-finally-built-the-full-pairing-end-to-end-this-a724a3fed899 |
 | 11 | Azure DevOps (CI/CD) | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_azuredevops-agenticai-claudecode-ugcPost-7511188229249818624-w7o2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/in-my-last-post-i-shared-how-i-split-epicbook-into-two-repositories-and-two-azure-devops-923a38973400 |
 | 12 | Docker | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_dmibypravinmishra-docker-devops-ugcPost-7513925745686278145-PVVX/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/deleting-a-real-record-from-a-production-database-on-purpose-then-getting-it-back-from-a-backup-ffee3b7d1d50 |
-| 13 | Kubernetes | ⬜ Not Started | ⏳ Pending | — | — |
+| 13 | Kubernetes | ✅ Complete | ✅ Solved | https://www.linkedin.com/posts/emmanuel-sunday-210a08323_kubernetes-devops-azure-ugcPost-7520204454210453504-olcN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHXXywBq0IrgBBhbi5ULmCrDuZgCEYc6fQ | https://medium.com/@sundayinibehe75/what-should-an-ai-be-allowed-to-do-when-your-kubernetes-app-breaks-e26f31cc5cb0 |
 | 14 | Final Project | ⬜ Not Started | ⏳ Pending | — | — |
 
 **Status:** ⬜ Not Started &nbsp;|&nbsp; 🔄 In Progress &nbsp;|&nbsp; ✅ Completed<br>
